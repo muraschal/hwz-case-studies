@@ -24,18 +24,11 @@
     <meta name="twitter:description" content="Analyse der Customer Journey bei Banana Republic: Wie die Marke Online und Offline zu einem nahtlosen Erlebnis verschmilzt.">
     <meta name="twitter:image" content="https://hwz-case-studies.rapold.io/images/banana-republic-og.jpg">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#1976d2">
-    <meta name="msapplication-TileColor" content="#1976d2">
-    <meta name="theme-color" content="#ffffff">
-    
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <!-- TradingView Widget -->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body class="case-study">
     <div class="container">
@@ -119,7 +112,45 @@
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">Customer Journey Map</h2>
+                <h2 class="section-title">1. Aktuelle Finanzdaten & Marktposition</h2>
+                <div class="section-content">
+                    <div class="stock-widget">
+                        <div class="stock-header">
+                            <h3>Gap Inc. (GPS:NYSE)</h3>
+                        </div>
+                        <div class="stock-chart">
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <script type="text/javascript">
+                                new TradingView.MediumWidget({
+                                    "symbols": [
+                                        ["Gap Inc.", "NYSE:GPS|12M"]
+                                    ],
+                                    "chartOnly": false,
+                                    "width": "100%",
+                                    "height": 220,
+                                    "locale": "de_DE",
+                                    "colorTheme": "light",
+                                    "autosize": true,
+                                    "showVolume": false,
+                                    "hideDateRanges": false,
+                                    "scalePosition": "right",
+                                    "scaleMode": "Normal",
+                                    "noTimeScale": false,
+                                    "valuesTracking": "1",
+                                    "trackingMode": "NoTracking",
+                                    "chartType": "area",
+                                    "container_id": "tradingview_gap"
+                                });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">2. Customer Journey Map</h2>
                 <div class="section-content">
                     <div class="mermaid">
                         journey
@@ -149,7 +180,7 @@
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">1. Awareness Phase</h2>
+                <h2 class="section-title">3. Awareness Phase</h2>
                 <div class="section-content">
                     <p>Die erste Berührung mit Banana Republic erfolgt oft über digitale Kanäle. Die Marke nutzt gezielt Social Media und Influencer Marketing, um ihre Zielgruppe anzusprechen. Dabei wird besonders Wert auf hochwertige Bildsprache und authentische Markenbotschaften gelegt.</p>
                     
@@ -186,7 +217,7 @@
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">2. Consideration Phase</h2>
+                <h2 class="section-title">4. Consideration Phase</h2>
                 <div class="section-content">
                     <p>In der Consideration-Phase suchen Kunden aktiv nach Informationen und Inspiration. Banana Republic bietet hier eine Vielzahl von digitalen Touchpoints, die den Entscheidungsprozess unterstützen.</p>
                     
@@ -204,7 +235,7 @@
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">3. Store Experience</h2>
+                <h2 class="section-title">5. Store Experience</h2>
                 <div class="section-content">
                     <p>Der physische Store bleibt ein zentraler Touchpoint in der Customer Journey. Banana Republic legt besonderen Wert auf eine hochwertige Laden-Atmosphäre und exzellenten Service.</p>
                     
@@ -241,7 +272,7 @@
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">4. Purchase Phase</h2>
+                <h2 class="section-title">6. Purchase Phase</h2>
                 <div class="section-content">
                     <p>Die Kaufphase ist bei Banana Republic durch eine Omnichannel-Strategie geprägt. Kunden können flexibel zwischen verschiedenen Kaufoptionen wählen.</p>
                     
@@ -259,7 +290,7 @@
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">5. After-Sale & Loyalty</h2>
+                <h2 class="section-title">7. After-Sale & Loyalty</h2>
                 <div class="section-content">
                     <p>Nach dem Kauf fokussiert sich Banana Republic auf den Aufbau langfristiger Kundenbeziehungen durch personalisierte Kommunikation und ein attraktives Loyalty-Programm.</p>
                     
