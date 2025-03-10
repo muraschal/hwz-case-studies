@@ -527,4 +527,95 @@ footer {
     box-shadow: none;
     border: 1px solid #000;
   }
+}
+
+/* Customer Journey Analysis Styles */
+.customer-journey-analysis {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.customer-journey-analysis h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.framework-description {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid #007bff;
+}
+
+.zmot-section,
+.fmot-section,
+.smot-section,
+.next-steps {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.customer-journey-analysis h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.customer-journey-analysis h4 {
+    color: #495057;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.customer-journey-analysis ul,
+.customer-journey-analysis ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.customer-journey-analysis li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.customer-journey-analysis ul ul {
+    margin-top: 0.5rem;
+}
+
+.next-steps ol {
+    counter-reset: steps;
+}
+
+.next-steps ol li {
+    list-style: none;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.next-steps ol li:before {
+    counter-increment: steps;
+    content: counter(steps);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.next-steps strong {
+    color: #495057;
 } 
