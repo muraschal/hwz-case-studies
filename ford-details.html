@@ -6,6 +6,7 @@
     <title>Ford F150 Case Study - Details</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body class="case-study">
     <div class="container">
@@ -203,6 +204,109 @@
                 </div>
             </section>
         </main>
+
+        <div class="fishbone-container">
+            <h2 class="section-title">Herausforderungen der F150 Transformation</h2>
+            <div class="mermaid">
+                graph LR
+                    F150[F150 Autonomie-Dilemma]
+                    
+                    %% Markenidentität
+                    M[Markenidentität]
+                    M1[Built Ford Tough]
+                    M2[Emotionale Bindung]
+                    M3[Amerikanische Werte]
+                    M1a[Robustheit]
+                    M1b[Zuverlässigkeit]
+                    M2a[Persönliche Kontrolle]
+                    M2b[Fahrerlebnis]
+                    M3a[Freiheit]
+                    M3b[Unabhängigkeit]
+                    
+                    %% Technologie
+                    T[Technologie]
+                    T1[Autonomie-Level]
+                    T2[Sicherheit]
+                    T3[Integration]
+                    T1a[Level 2-3 vs. 4-5]
+                    T1b[Assistenzsysteme]
+                    T2a[Haftung]
+                    T2b[Zuverlässigkeit]
+                    T3a[Legacy-Systeme]
+                    T3b[Neue Plattformen]
+                    
+                    %% Markt
+                    K[Kundenakzeptanz]
+                    K1[Zielgruppen]
+                    K2[Preisgestaltung]
+                    K3[Nutzungsszenarien]
+                    K1a[Traditionelle Kunden]
+                    K1b[Neue Segmente]
+                    K2a[Entwicklungskosten]
+                    K2b[Marktpreise]
+                    K3a[Privat]
+                    K3b[Kommerziell]
+                    
+                    %% Wettbewerb
+                    W[Wettbewerb]
+                    W1[Tesla/Rivian]
+                    W2[GM/RAM]
+                    W3[Marktposition]
+                    W1a[Tech-Innovation]
+                    W1b[Neue Player]
+                    W2a[Traditionelle OEMs]
+                    W2b[Strategien]
+                    W3a[Marktführerschaft]
+                    W3b[Differenzierung]
+
+                    %% Verbindungen
+                    F150 --> M
+                    F150 --> T
+                    F150 --> K
+                    F150 --> W
+                    
+                    M --> M1 & M2 & M3
+                    M1 --> M1a & M1b
+                    M2 --> M2a & M2b
+                    M3 --> M3a & M3b
+                    
+                    T --> T1 & T2 & T3
+                    T1 --> T1a & T1b
+                    T2 --> T2a & T2b
+                    T3 --> T3a & T3b
+                    
+                    K --> K1 & K2 & K3
+                    K1 --> K1a & K1b
+                    K2 --> K2a & K2b
+                    K3 --> K3a & K3b
+                    
+                    W --> W1 & W2 & W3
+                    W1 --> W1a & W1b
+                    W2 --> W2a & W2b
+                    W3 --> W3a & W3b
+
+                    %% Styling
+                    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
+                    classDef main fill:#e3f2fd,stroke:#1976d2,stroke-width:2px;
+                    classDef category fill:#f5f5f5,stroke:#666,stroke-width:1.5px;
+                    class F150 main;
+                    class M,T,K,W category;
+            </div>
+        </div>
+
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'neutral',
+                flowchart: {
+                    curve: 'basis',
+                    padding: 20,
+                    nodeSpacing: 50,
+                    rankSpacing: 50,
+                    useMaxWidth: false
+                }
+            });
+        </script>
 
         <footer class="case-footer">
             <p>© 2024 HWZ Case Studies. Alle Rechte vorbehalten.</p>
