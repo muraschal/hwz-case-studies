@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWZ Case Studies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HWZ Case Studies</h1>
+            <p>Eine Sammlung von Fallstudien für Bildungszwecke</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Suche nach Case Studies...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="case-studies-grid" id="caseStudiesGrid">
+            <!-- Piaggio Case Study -->
+            <div class="case-study-card">
+                <div class="card-header">
+                    <h3>Piaggio</h3>
+                    <span class="case-number">01</span>
+                </div>
+                <div class="card-body">
+                    <p class="case-subtitle">Vom Kultobjekt zur digitalen Mobilitätsplattform</p>
+                    <p class="case-description">Eine Wirtschaftsinformatik-Analyse des italienischen Motorradherstellers Piaggio, bekannt für die ikonische Vespa, und seiner Herausforderungen im Zeitalter der Digitalisierung und zunehmender Marktdynamik.</p>
+                    <div class="key-points">
+                        <h4>Kernpunkte:</h4>
+                        <ul>
+                            <li>Spannungsfeld zwischen Tradition und Innovation</li>
+                            <li>Herausforderungen durch Digitalisierung und Regulierung</li>
+                            <li>Vergleich mit agileren Wettbewerbern</li>
+                            <li>ROI-Analyse digitaler Investitionen</li>
+                            <li>Potenzial für neue digitale Geschäftsmodelle</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="button-group">
+                        <a href="src/01_PIAGGIO.pdf" target="_blank" class="btn">
+                            <i class="fas fa-file-pdf"></i> PDF öffnen
+                        </a>
+                        <a href="piaggio-details.html" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                        <button id="showFishboneBtn" class="btn btn-accent">
+                            <i class="fas fa-project-diagram"></i> Fishbone-Diagramm
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ford Case Study -->
+            <div class="case-study-card">
+                <div class="card-header">
+                    <h3>Ford</h3>
+                    <span class="case-number">02</span>
+                </div>
+                <div class="card-body">
+                    <p class="case-subtitle">Digitale Transformation in der Automobilindustrie</p>
+                    <p class="case-description">Eine detaillierte Analyse der digitalen Transformation bei Ford, einem der traditionsreichsten Automobilhersteller der Welt.</p>
+                    <div class="key-points">
+                        <h4>Kernpunkte:</h4>
+                        <ul>
+                            <li>Digitalisierung der Produktionsprozesse</li>
+                            <li>Entwicklung neuer Mobilitätslösungen</li>
+                            <li>Transformation der Unternehmenskultur</li>
+                            <li>Technologische Innovation</li>
+                            <li>Zukunft der Automobilindustrie</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="button-group">
+                        <a href="src/02_FORD.pdf" target="_blank" class="btn">
+                            <i class="fas fa-file-pdf"></i> PDF öffnen
+                        </a>
+                        <a href="ford-details.html" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal für das Fishbone-Diagramm -->
+    <div id="fishboneModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Piaggio: Herausforderungen und Ursachen</h2>
+            <div class="fishbone-container">
+                <img src="images/piaggio-fishbone.png" alt="Fishbone-Diagramm zu Piaggios Herausforderungen" class="fishbone-image">
+            </div>
+            <div class="modal-description">
+                <p>Das Fishbone-Diagramm zeigt die Hauptursachen für Piaggios aktuelle Herausforderungen im Markt und bei der digitalen Transformation.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 HWZ Case Studies. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
