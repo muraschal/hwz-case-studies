@@ -42,252 +42,137 @@
         </header>
 
         <main>
-            <section class="content-section financial-overview">
-                <h2 class="section-title">Finanzielle Übersicht & KPIs</h2>
-                <div class="section-content">
-                    <div class="kpi-grid">
-                        <div class="kpi-widget">
-                            <div class="tradingview-widget-container">
-                                <div class="tradingview-widget-container__widget"></div>
-                                <script type="text/javascript">
-                                new TradingView.MediumWidget({
-                                    "symbols": [
-                                        ["Piaggio", "BIT:PIA|12M"]
-                                    ],
-                                    "chartOnly": false,
-                                    "width": "100%",
-                                    "height": 220,
-                                    "locale": "de_DE",
-                                    "colorTheme": "light",
-                                    "autosize": true,
-                                    "showVolume": false,
-                                    "hideDateRanges": false,
-                                    "scalePosition": "right",
-                                    "scaleMode": "Normal",
-                                    "noTimeScale": false,
-                                    "valuesTracking": "1",
-                                    "trackingMode": "NoTracking",
-                                    "chartType": "area",
-                                    "container_id": "tradingview_piaggio"
-                                });
-                                </script>
-                            </div>
-                        </div>
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <h3>Umsatz 2023</h3>
-                                <div class="metric-value">€2.1 Mrd.</div>
-                                <div class="metric-change positive">+4.2% YoY</div>
-                            </div>
-                            <div class="metric-card">
-                                <h3>E-Mobilität</h3>
-                                <div class="metric-value">12%</div>
-                                <div class="metric-change positive">+3% YoY</div>
-                            </div>
-                            <div class="metric-card">
-                                <h3>Vespa Verkäufe</h3>
-                                <div class="metric-value">180K</div>
-                                <div class="metric-change positive">+5.8% YoY</div>
-                            </div>
-                            <div class="metric-card">
-                                <h3>R&D Quote</h3>
-                                <div class="metric-value">4.5%</div>
-                                <div class="metric-change positive">+0.8% YoY</div>
-                            </div>
-                            <div class="metric-card">
-                                <h3>Marktanteil EU</h3>
-                                <div class="metric-value">14.7%</div>
-                                <div class="metric-change positive">+1.2% YoY</div>
-                            </div>
-                            <div class="metric-card">
-                                <h3>CO2 Reduktion</h3>
-                                <div class="metric-value">-15%</div>
-                                <div class="metric-change positive">vs. 2019</div>
-                            </div>
-                        </div>
+            <section>
+                <h2>Finanzielle Übersicht & KPIs</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Umsatz 2023</h3>
+                        <div class="metric-value">€2.1 Mrd.</div>
+                        <div class="metric-change positive">+4.2% YoY</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>E-Mobilität</h3>
+                        <div class="metric-value">12%</div>
+                        <div class="metric-change positive">+3% YoY</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Vespa Verkäufe</h3>
+                        <div class="metric-value">180K</div>
+                        <div class="metric-change positive">+5.8% YoY</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>R&D Quote</h3>
+                        <div class="metric-value">4.5%</div>
+                        <div class="metric-change positive">+0.8% YoY</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Marktanteil EU</h3>
+                        <div class="metric-value">14.7%</div>
+                        <div class="metric-change positive">+1.2% YoY</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>CO2 Reduktion</h3>
+                        <div class="metric-value">-15%</div>
+                        <div class="metric-change">vs. 2019</div>
                     </div>
                 </div>
             </section>
 
-            <section class="content-section">
-                <h2 class="section-title">1. Aktuelle Finanzdaten & Marktposition</h2>
-                <div class="section-content">
-                    <div class="stock-widget">
-                        <div class="stock-header">
-                            <h3>Piaggio & C. SpA (PIA:BIT)</h3>
-                        </div>
-                        <div class="stock-chart">
-                            <div class="tradingview-widget-container">
-                                <div class="tradingview-widget-container__widget"></div>
-                                <script type="text/javascript">
-                                new TradingView.MediumWidget({
-                                    "symbols": [
-                                        ["Piaggio", "BIT:PIA|12M"]
-                                    ],
-                                    "chartOnly": false,
-                                    "width": "100%",
-                                    "height": 220,
-                                    "locale": "de_DE",
-                                    "colorTheme": "light",
-                                    "autosize": true,
-                                    "showVolume": false,
-                                    "hideDateRanges": false,
-                                    "scalePosition": "right",
-                                    "scaleMode": "Normal",
-                                    "noTimeScale": false,
-                                    "valuesTracking": "1",
-                                    "trackingMode": "NoTracking",
-                                    "chartType": "area",
-                                    "container_id": "tradingview_piaggio"
-                                });
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section>
+                <h2>1. Aktuelle Finanzdaten & Marktposition</h2>
+                <div id="tradingview_piaggio"></div>
+                <script type="text/javascript">
+                new TradingView.MediumWidget({
+                    "symbols": [
+                        ["Piaggio", "BIT:PIA|12M"]
+                    ],
+                    "chartOnly": false,
+                    "width": "100%",
+                    "height": 400,
+                    "locale": "de_DE",
+                    "colorTheme": "light",
+                    "autosize": true,
+                    "showVolume": false,
+                    "hideDateRanges": false,
+                    "scalePosition": "right",
+                    "scaleMode": "Normal",
+                    "noTimeScale": false,
+                    "valuesTracking": "1",
+                    "chartType": "area",
+                    "container_id": "tradingview_piaggio"
+                });
+                </script>
             </section>
 
-            <section class="content-section">
-                <h2 class="section-title">2. Kontextanalyse: Zwischen Kultobjekt und Komplexitätsfalle</h2>
-                <div class="section-content">
-                    <p>Piaggio hat mit der Vespa nicht einfach nur einen Scooter geschaffen – sondern eine kulturelle Ikone. Doch während der "Dolce Vita"-Mythos weiterlebt, steht Piaggio vor einer gnadenlosen Wahrheit des modernen Marktes: Der schnelle Takt von Innovation und steigende regulatorische Anforderungen werden zum zynischen Realitätscheck. Das einstige Erfolgsrezept – wenige, sorgfältig designte Modelle mit langer Laufzeit – droht im digitalisierten Zeitalter zum Wettbewerbsnachteil zu werden.</p>
-                </div>
+            <section>
+                <h2>2. Kontextanalyse: Zwischen Kultobjekt und Komplexitätsfalle</h2>
+                <p>Piaggio hat mit der Vespa nicht einfach nur einen Scooter geschaffen – sondern eine kulturelle Ikone. Doch während der "Dolce Vita"-Mythos weiterlebt, steht Piaggio vor einer gnadenlosen Wahrheit des modernen Marktes: Der schnelle Takt von Innovation und steigende regulatorische Anforderungen werden zum zynischen Realitätscheck. Das einstige Erfolgsrezept – wenige, sorgfältig designte Modelle mit langer Laufzeit – droht im digitalisierten Zeitalter zum Wettbewerbsnachteil zu werden.</p>
             </section>
             
-            <section class="content-section">
-                <h2 class="section-title">3. Marktdynamik und Digitalisierung</h2>
-                <div class="section-content">
-                    <p>Piaggio kämpft im Kontext zunehmender Regulierungen (Stichwort "Green Engine") gegen Wettbewerber, die Digitalisierung und modulare Geschäftsmodelle konsequenter umsetzen. Während Aprilia durch Co-Engineering, Outsourcing und agile Produktionsprozesse rasch auf Marktveränderungen reagiert, steckt Piaggio noch in den tradierten Fertigungsmethoden fest.</p>
-                </div>
+            <section>
+                <h2>3. Marktdynamik und Digitalisierung</h2>
+                <p>Piaggio kämpft im Kontext zunehmender Regulierungen (Stichwort "Green Engine") gegen Wettbewerber, die Digitalisierung und modulare Geschäftsmodelle konsequenter umsetzen. Während Aprilia durch Co-Engineering, Outsourcing und agile Produktionsprozesse rasch auf Marktveränderungen reagiert, steckt Piaggio noch in den tradierten Fertigungsmethoden fest.</p>
             </section>
             
-            <section class="content-section">
-                <h2 class="section-title">4. IT-Infrastruktur und Prozessdigitalisierung</h2>
-                <div class="section-content">
-                    <p>Ein kritischer Punkt ist Piaggios vertikal integrierte Produktionsstruktur. Während Konkurrenten wie Aprilia mittels starker Prozessdigitalisierung, agilen Entwicklungsprozessen und ausgefeilter Lieferantenintegration Flexibilität und Geschwindigkeit maximieren, hält Piaggio an einer internen Motorenproduktion fest. Dies steigert zwar die Qualitätssicherung, hemmt jedoch die Fähigkeit, schnell auf Markttrends zu reagieren.</p>
-                </div>
+            <section>
+                <h2>4. IT-Infrastruktur und Prozessdigitalisierung</h2>
+                <p>Ein kritischer Punkt ist Piaggios vertikal integrierte Produktionsstruktur. Während Konkurrenten wie Aprilia mittels starker Prozessdigitalisierung, agilen Entwicklungsprozessen und ausgefeilter Lieferantenintegration Flexibilität und Geschwindigkeit maximieren, hält Piaggio an einer internen Motorenproduktion fest. Dies steigert zwar die Qualitätssicherung, hemmt jedoch die Fähigkeit, schnell auf Markttrends zu reagieren.</p>
             </section>
             
-            <section class="content-section">
-                <h2 class="section-title">5. Wirtschaftlichkeit digitaler Investitionen (ROI-Analyse)</h2>
-                <div class="section-content">
-                    <p>Die geplante Investition in das neue Motorenwerk („Green Engine") zeigt einen klassischen Konflikt: Innovationszwang versus Kostendruck. Die digitale Prozesssteuerung eines hoch automatisierten Werks (Stichwort Industrie 4.0) könnte die Produktionskosten langfristig senken. Allerdings zeigt die Wirtschaftlichkeitsanalyse klar: Ohne Skaleneffekte droht Piaggio, aufgrund zu niedriger Stückzahlen, in die Verlustzone zu rutschen. Der notwendige ROI könnte nur durch Skalierung, Kooperationen und digitale Vernetzung gesichert werden.</p>
-                </div>
+            <section>
+                <h2>5. Wirtschaftlichkeit digitaler Investitionen (ROI-Analyse)</h2>
+                <p>Die geplante Investition in das neue Motorenwerk („Green Engine") zeigt einen klassischen Konflikt: Innovationszwang versus Kostendruck. Die digitale Prozesssteuerung eines hoch automatisierten Werks (Stichwort Industrie 4.0) könnte die Produktionskosten langfristig senken. Allerdings zeigt die Wirtschaftlichkeitsanalyse klar: Ohne Skaleneffekte droht Piaggio, aufgrund zu niedriger Stückzahlen, in die Verlustzone zu rutschen. Der notwendige ROI könnte nur durch Skalierung, Kooperationen und digitale Vernetzung gesichert werden.</p>
             </section>
             
-            <section class="content-section">
-                <h2 class="section-title">6. Wettbewerbsanalyse mit einem IT-Blickwinkel</h2>
-                <div class="section-content">
-                    <div class="table-container">
-                        <p class="table-caption">Markenvergleich:</p>
-                        <table class="analysis-table">
-                            <thead>
-                                <tr>
-                                    <th>Dimensionen</th>
-                                    <th>Piaggio (Vespa)</th>
-                                    <th>Aprilia</th>
-                                    <th>Honda</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Markenpersönlichkeit</strong></td>
-                                    <td>Traditionell, kultig, urban, zeitlos elegant</td>
-                                    <td>Innovativ, flexibel, sportlich, designorientiert</td>
-                                    <td>Global, zuverlässig, technisch überlegen</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Kernwerte</strong></td>
-                                    <td>Italienische Eleganz, Nostalgie, Kultstatus</td>
-                                    <td>Kreativität, Enthusiasmus, sportlicher Ehrgeiz</td>
-                                    <td>Qualität, Zuverlässigkeit, globale Standards</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Produktion</strong></td>
-                                    <td>Vertikal integriert, interne Produktion</td>
-                                    <td>Outsourcing, Kooperationsnetzwerk</td>
-                                    <td>Globale Produktion, Economies of Scale</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Innovationsfokus</strong></td>
-                                    <td>"Grüne" Motoren, Umwelttechnologie</td>
-                                    <td>Schnelle Markteinführung, Design</td>
-                                    <td>Technologische Exzellenz</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <section>
+                <h2>6. Wettbewerbsanalyse</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensionen</th>
+                            <th>Piaggio (Vespa)</th>
+                            <th>Aprilia</th>
+                            <th>Honda</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Markenpersönlichkeit</td>
+                            <td>Traditionell, kultig, urban, zeitlos elegant</td>
+                            <td>Innovativ, flexibel, sportlich, designorientiert</td>
+                            <td>Global, zuverlässig, technisch überlegen</td>
+                        </tr>
+                        <tr>
+                            <td>Kernwerte</td>
+                            <td>Italienische Eleganz, Nostalgie, Kultstatus</td>
+                            <td>Kreativität, Enthusiasmus, sportlicher Ehrgeiz</td>
+                            <td>Qualität, Zuverlässigkeit, globale Standards</td>
+                        </tr>
+                        <tr>
+                            <td>Produktion</td>
+                            <td>Vertikal integriert, interne Produktion</td>
+                            <td>Outsourcing, Kooperationsnetzwerk</td>
+                            <td>Globale Produktion, Economies of Scale</td>
+                        </tr>
+                        <tr>
+                            <td>Innovationsfokus</td>
+                            <td>"Grüne" Motoren, Umwelttechnologie</td>
+                            <td>Schnelle Markteinführung, Design</td>
+                            <td>Technologische Exzellenz</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
-            
-            <section class="content-section">
-                <h2 class="section-title">7. Digitale Geschäftsmodelle</h2>
-                <div class="section-content">
-                    <p>Die Herausforderungen rund um Verkehrsdichte und Emissionsvorschriften bieten Piaggio die Chance, mit digitalen Mobilitätsservices neue Märkte zu erschliessen. Statt ausschliesslich physische Produkte zu vermarkten, könnte Piaggio in vernetzte Scooter-Flotten und Softwarelösungen investieren – eine Chance, die der Vespa-Kult als Hebel zur Digitalisierung optimal nutzen könnte.</p>
-                </div>
-            </section>
-            
-            <section class="content-section video-section">
-                <h2 class="section-title">Video Präsentation</h2>
-                <div class="section-content">
-                    <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1064357810?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="01_PIAGGIO"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                </div>
-            </section>
-            
-            <section class="content-section conclusion">
-                <h2 class="section-title">Fazit</h2>
-                <div class="section-content">
-                    <p>Piaggio steht an einer kritischen Weggabelung: Innovation erzwingen oder alte Pfade polieren? Um langfristig erfolgreich zu sein, sollte Piaggio schleunigst auf eine modulare, agile und digital vernetzte Produktionsstrategie setzen. Die entscheidende Frage ist nicht nur, ob ein neues Motorenwerk profitabel ist, sondern ob Piaggio bereit ist, sich von seinen "Darlings" zu lösen und mit digitalen Hebeln aus einer Kultmarke ein modernes Mobilitätsunternehmen zu formen.</p>
-                </div>
+
+            <section>
+                <h2>Fazit</h2>
+                <p>Piaggio steht an einer kritischen Weggabelung: Innovation erzwingen oder alte Pfade polieren? Um langfristig erfolgreich zu sein, sollte Piaggio schleunigst auf eine modulare, agile und digital vernetzte Produktionsstrategie setzen. Die entscheidende Frage ist nicht nur, ob ein neues Motorenwerk profitabel ist, sondern ob Piaggio bereit ist, sich von seinen "Darlings" zu lösen und mit digitalen Hebeln aus einer Kultmarke ein modernes Mobilitätsunternehmen zu formen.</p>
             </section>
         </main>
 
         <footer>
             <p>© 2024 HWZ Case Studies. Alle Rechte vorbehalten.</p>
         </footer>
-    </div>
-
-    <div class="fishbone-container">
-        <div class="mermaid">
-            graph LR
-                Piaggio[Digitale Transformation Piaggio]
-                
-                T1[Tradition]
-                T2[Heritage]
-                T3[Markenidentität]
-                
-                I1[Neue Technologien]
-                I2[Digitale Plattformen]
-                I3[IoT Integration]
-                
-                M1[Marktwandel]
-                M2[Neue Zielgruppen]
-                M3[Globalisierung]
-                
-                R1[Regulierungen]
-                R2[Umweltauflagen]
-                R3[Sicherheitsstandards]
-                
-                Piaggio --> T1
-                Piaggio --> T2
-                Piaggio --> T3
-                
-                Piaggio --> I1
-                Piaggio --> I2
-                Piaggio --> I3
-                
-                Piaggio --> M1
-                Piaggio --> M2
-                Piaggio --> M3
-                
-                Piaggio --> R1
-                Piaggio --> R2
-                Piaggio --> R3
-
-                classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
-                classDef main fill:#e3f2fd,stroke:#1976d2,stroke-width:2px;
-                class Piaggio main;
-        </div>
     </div>
 
     <script>
