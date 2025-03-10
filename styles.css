@@ -358,12 +358,61 @@ footer {
 
 .site-header {
   text-align: center;
-  padding: calc(var(--spacing) * 3) var(--spacing);
+  padding: calc(var(--spacing) * 6) var(--spacing);
   margin-bottom: calc(var(--spacing) * 3);
   background: var(--glass-bg);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   border: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header .header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.site-header .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.site-header .video-background iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  pointer-events: none;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.site-header .subtitle {
+  color: rgba(255,255,255,0.9);
 }
 
 .header-content {
