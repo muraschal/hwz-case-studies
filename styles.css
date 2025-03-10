@@ -1,15 +1,17 @@
 /* Grundlegende Stile */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --primary-color: #00b4d8;
+    --secondary-color: #0077b6;
+    --accent-color: #48cae4;
+    --light-color: #caf0f8;
+    --dark-color: #03045e;
+    --glass-bg: rgba(2, 4, 94, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     --blur-effect: blur(8px);
     --transition: all 0.3s ease;
+    --text-color: #e0e0e0;
+    --text-color-muted: #a0a0a0;
 }
 
 * {
@@ -21,8 +23,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--dark-color);
-    background: linear-gradient(135deg, #a8e6cf 0%, #3498db 100%);
+    color: var(--text-color);
+    background: linear-gradient(135deg, #000428 0%, #004e92 100%);
     min-height: 100vh;
     position: relative;
 }
@@ -36,7 +38,7 @@ body::before {
     height: 100%;
     background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23FFFFFF" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-1.5C87,13.3,81.4,26.7,73.6,38.4C65.8,50.1,55.7,60.2,43.2,67.9C30.7,75.6,15.3,80.9,0.6,79.9C-14.2,78.9,-28.4,71.6,-41.6,63.4C-54.8,55.2,-67,46.2,-74.3,33.5C-81.6,20.8,-84,4.4,-83.1,-12.9C-82.2,-30.2,-78,-48.4,-67.1,-56.9C-56.2,-65.4,-38.6,-64.2,-23.7,-70.9C-8.8,-77.5,3.4,-92,17.8,-93.7C32.2,-95.4,48.5,-84.4,44.7,-76.4Z" transform="translate(100 100)" /></svg>') no-repeat center center fixed;
     background-size: cover;
-    opacity: 0.1;
+    opacity: 0.05;
     z-index: -1;
 }
 
@@ -54,7 +56,7 @@ header {
     -webkit-backdrop-filter: var(--blur-effect);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
-    color: var(--dark-color);
+    color: var(--text-color);
     padding: 2rem 0;
     margin-bottom: 2rem;
 }
@@ -78,7 +80,7 @@ header h1 {
     -webkit-backdrop-filter: var(--blur-effect);
     border: 1px solid var(--glass-border);
     border-radius: 30px;
-    color: var(--dark-color);
+    color: var(--text-color);
     font-size: 16px;
     transition: var(--transition);
     box-shadow: var(--glass-shadow);
@@ -87,8 +89,12 @@ header h1 {
 #searchInput:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: var(--glass-shadow), 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--glass-shadow), 0 0 0 3px rgba(0, 180, 216, 0.2);
+}
+
+#searchInput::placeholder {
+    color: var(--text-color-muted);
 }
 
 .search-icon {
@@ -96,7 +102,7 @@ header h1 {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: #aaa;
+    color: var(--text-color-muted);
 }
 
 /* Case Studies Grid */
@@ -122,12 +128,13 @@ header h1 {
 
 .case-study-card:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--glass-shadow), 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--glass-shadow), 0 10px 20px rgba(0, 0, 0, 0.2);
     border-color: var(--primary-color);
+    background: rgba(2, 4, 94, 0.35);
 }
 
 .card-header {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     position: relative;
     border-bottom: 1px solid var(--glass-border);
@@ -136,6 +143,7 @@ header h1 {
 .card-header h3 {
     margin-bottom: 0;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .case-number {
@@ -144,12 +152,13 @@ header h1 {
     right: 1.5rem;
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .card-body {
     padding: 1.5rem;
     flex-grow: 1;
+    color: var(--text-color);
 }
 
 .card-footer {
@@ -162,7 +171,7 @@ header h1 {
     backdrop-filter: var(--blur-effect);
     -webkit-backdrop-filter: var(--blur-effect);
     border: 1px solid var(--glass-border);
-    color: var(--dark-color);
+    color: var(--text-color);
     padding: 12px 24px;
     border-radius: 30px;
     text-decoration: none;
@@ -173,10 +182,11 @@ header h1 {
 }
 
 .btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: var(--glass-shadow);
+    color: var(--light-color);
 }
 
 .btn i {
@@ -184,8 +194,10 @@ header h1 {
 }
 
 .btn.disabled {
-    background-color: #ccc;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-color-muted);
     cursor: not-allowed;
+    border-color: transparent;
 }
 
 .placeholder {
@@ -200,7 +212,7 @@ footer {
     backdrop-filter: var(--blur-effect);
     -webkit-backdrop-filter: var(--blur-effect);
     border-top: 1px solid var(--glass-border);
-    color: var(--dark-color);
+    color: var(--text-color);
     padding: 1.5rem 0;
     text-align: center;
     margin-top: 2rem;
@@ -221,15 +233,16 @@ footer {
 }
 
 .key-points {
-    background-color: rgba(52, 152, 219, 0.1);
+    background: rgba(0, 180, 216, 0.1);
     padding: 15px;
     border-radius: 8px;
     margin-top: 15px;
+    border: 1px solid var(--glass-border);
 }
 
 .key-points h4 {
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .key-points ul {
@@ -287,6 +300,7 @@ footer {
     max-width: 900px;
     box-shadow: var(--glass-shadow);
     position: relative;
+    color: var(--text-color);
 }
 
 .close-modal {
@@ -295,13 +309,13 @@ footer {
     right: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #aaa;
+    color: var(--text-color-muted);
     cursor: pointer;
     transition: var(--transition);
 }
 
 .close-modal:hover {
-    color: var(--dark-color);
+    color: var(--text-color);
 }
 
 .fishbone-container {
