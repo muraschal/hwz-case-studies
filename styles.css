@@ -1,17 +1,18 @@
 /* Grundlegende Stile */
 :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #333333;
-    --accent-color: #666666;
-    --light-color: #f5f5f5;
-    --dark-color: #000000;
-    --glass-bg: rgba(0, 0, 0, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
-    --blur-effect: blur(10px);
-    --transition: all 0.3s ease;
-    --text-color: #f5f5f5;
-    --text-color-muted: #999999;
+    --primary-color: #333333;
+    --secondary-color: #666666;
+    --accent-color: #999999;
+    --light-color: #ffffff;
+    --dark-color: #333333;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    --blur-effect: blur(0px);
+    --transition: all 0.2s ease;
+    --text-color: #333333;
+    --text-color-muted: #666666;
+    --background-color: #f5f5f5;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: #000000;
+    background: var(--background-color);
     min-height: 100vh;
     position: relative;
 }
@@ -36,12 +37,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
-                linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
-                linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+    background: linear-gradient(45deg, #eeeeee 25%, transparent 25%),
+                linear-gradient(-45deg, #eeeeee 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #eeeeee 75%),
+                linear-gradient(-45deg, transparent 75%, #eeeeee 75%);
     background-size: 20px 20px;
-    opacity: 0.03;
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -82,7 +83,7 @@ header h1 {
     backdrop-filter: var(--blur-effect);
     -webkit-backdrop-filter: var(--blur-effect);
     border: 1px solid var(--glass-border);
-    border-radius: 30px;
+    border-radius: 4px;
     color: var(--text-color);
     font-size: 16px;
     transition: var(--transition);
@@ -92,8 +93,8 @@ header h1 {
 #searchInput:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: var(--glass-shadow), 0 0 0 3px rgba(0, 180, 216, 0.2);
+    background: var(--light-color);
+    box-shadow: var(--glass-shadow);
 }
 
 #searchInput::placeholder {
@@ -121,7 +122,7 @@ header h1 {
     backdrop-filter: var(--blur-effect);
     -webkit-backdrop-filter: var(--blur-effect);
     border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: var(--glass-shadow);
     transition: var(--transition);
     overflow: hidden;
@@ -130,42 +131,34 @@ header h1 {
 }
 
 .case-study-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--glass-shadow), 0 10px 20px rgba(0, 0, 0, 0.4);
-    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--glass-shadow);
+    border-color: var(--primary-color);
 }
 
 .card-header {
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--light-color);
     padding: 1.5rem;
     position: relative;
     border-bottom: 1px solid var(--glass-border);
 }
 
 .card-header h3 {
-    margin-bottom: 0;
-    font-weight: 600;
     color: var(--text-color);
 }
 
 .case-number {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 .card-body {
-    padding: 1.5rem;
-    flex-grow: 1;
     color: var(--text-color);
 }
 
 .card-footer {
     padding: 1.5rem;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--glass-border);
+    background: var(--light-color);
 }
 
 .btn {
@@ -184,9 +177,10 @@ header h1 {
 }
 
 .btn:hover {
-    background: var(--secondary-color);
-    border-color: var(--accent-color);
-    transform: translateY(-2px);
+    background: var(--light-color);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    color: var(--primary-color);
 }
 
 .btn i {
@@ -194,10 +188,10 @@ header h1 {
 }
 
 .btn.disabled {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--background-color);
     color: var(--text-color-muted);
     cursor: not-allowed;
-    border-color: transparent;
+    border-color: var(--glass-border);
 }
 
 .placeholder {
@@ -233,7 +227,7 @@ footer {
 }
 
 .key-points {
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--light-color);
     padding: 15px;
     border-radius: 4px;
     margin-top: 15px;
@@ -241,8 +235,7 @@ footer {
 }
 
 .key-points h4 {
-    margin-bottom: 10px;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .key-points ul {
@@ -294,7 +287,7 @@ footer {
     backdrop-filter: var(--blur-effect);
     -webkit-backdrop-filter: var(--blur-effect);
     border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 25px;
     width: 90%;
     max-width: 900px;
@@ -370,7 +363,7 @@ footer {
 
 /* Case Study Details Page */
 .case-study {
-    background: var(--primary-color);
+    background: var(--background-color);
 }
 
 .case-header {
@@ -379,6 +372,7 @@ footer {
     background: var(--glass-bg);
     color: var(--text-color);
     margin-bottom: 2rem;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .case-title {
@@ -415,7 +409,7 @@ footer {
 
 .content-section {
     background: var(--glass-bg);
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: var(--glass-shadow);
     margin-bottom: 2rem;
     overflow: hidden;
@@ -424,7 +418,7 @@ footer {
 .section-title {
     padding: 1.5rem;
     margin: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--light-color);
     color: var(--text-color);
     font-size: 1.3rem;
     border-bottom: 1px solid var(--glass-border);
@@ -502,7 +496,7 @@ footer {
     border-collapse: collapse;
     margin: 1.5rem 0;
     background: var(--glass-bg);
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     box-shadow: var(--glass-shadow);
 }
@@ -516,12 +510,13 @@ footer {
 }
 
 .analysis-table th {
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--light-color);
     font-weight: 600;
+    color: var(--primary-color);
 }
 
 .analysis-table tr:hover {
-    background: var(--secondary-color);
+    background: var(--background-color);
 }
 
 .analysis-table td strong {
