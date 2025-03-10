@@ -5,7 +5,10 @@
     --accent-color: #e74c3c;
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --blur-effect: blur(8px);
     --transition: all 0.3s ease;
 }
 
@@ -19,7 +22,22 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
-    background-color: #f5f7fa;
+    background: linear-gradient(135deg, #a8e6cf 0%, #3498db 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23FFFFFF" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-1.5C87,13.3,81.4,26.7,73.6,38.4C65.8,50.1,55.7,60.2,43.2,67.9C30.7,75.6,15.3,80.9,0.6,79.9C-14.2,78.9,-28.4,71.6,-41.6,63.4C-54.8,55.2,-67,46.2,-74.3,33.5C-81.6,20.8,-84,4.4,-83.1,-12.9C-82.2,-30.2,-78,-48.4,-67.1,-56.9C-56.2,-65.4,-38.6,-64.2,-23.7,-70.9C-8.8,-77.5,3.4,-92,17.8,-93.7C32.2,-95.4,48.5,-84.4,44.7,-76.4Z" transform="translate(100 100)" /></svg>') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .container {
@@ -31,10 +49,14 @@ body {
 
 /* Header */
 header {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--dark-color);
     padding: 2rem 0;
-    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
 }
 
 header h1 {
@@ -50,19 +72,23 @@ header h1 {
 
 #searchInput {
     width: 100%;
-    padding: 12px 20px;
-    padding-right: 50px;
-    border: 1px solid #ddd;
+    padding: 12px 24px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect);
+    border: 1px solid var(--glass-border);
     border-radius: 30px;
+    color: var(--dark-color);
     font-size: 16px;
     transition: var(--transition);
-    box-shadow: var(--shadow);
+    box-shadow: var(--glass-shadow);
 }
 
 #searchInput:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: var(--glass-shadow), 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .search-icon {
@@ -82,24 +108,29 @@ header h1 {
 }
 
 .case-study-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
     transition: var(--transition);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
 .case-study-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--glass-shadow), 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
 }
 
 .card-header {
+    background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
-    background-color: var(--light-color);
     position: relative;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .card-header h3 {
@@ -127,19 +158,25 @@ header h1 {
 }
 
 .btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect);
+    border: 1px solid var(--glass-border);
+    color: var(--dark-color);
+    padding: 12px 24px;
     border-radius: 30px;
     text-decoration: none;
     transition: var(--transition);
     text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-color);
     transform: translateY(-2px);
+    box-shadow: var(--glass-shadow);
 }
 
 .btn i {
@@ -159,11 +196,15 @@ header h1 {
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color);
-    color: white;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect);
+    border-top: 1px solid var(--glass-border);
+    color: var(--dark-color);
     padding: 1.5rem 0;
     text-align: center;
     margin-top: 2rem;
+    box-shadow: var(--glass-shadow);
 }
 
 /* Erweiterte Stile für Case Study Cards */
@@ -236,13 +277,15 @@ footer {
 }
 
 .modal-content {
-    background-color: white;
-    margin: 5% auto;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    -webkit-backdrop-filter: var(--blur-effect);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
     padding: 25px;
-    border-radius: 10px;
     width: 90%;
     max-width: 900px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--glass-shadow);
     position: relative;
 }
 
