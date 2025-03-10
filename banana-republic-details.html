@@ -27,23 +27,22 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <!-- TradingView Widget -->
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
-<body class="case-study">
+<body>
     <div class="container">
-        <header class="case-header">
-            <h1 class="case-title">Banana Republic Case Study</h1>
-            <h2 class="case-subtitle">Customer Journey Map: Von Retail zu Digital Experience</h2>
+        <header>
+            <h1>Banana Republic Case Study</h1>
+            <h2>Customer Journey Map: Von Retail zu Digital Experience</h2>
             
-            <nav class="navigation">
-                <a href="/" class="nav-link">🏠 Zurück zur Übersicht</a>
-                <a href="src/03_CUSTOMER-JOURNEY/M-1012P - Tagged.pdf" class="nav-link pdf-link">📝 PDF Version</a>
-                <a href="src/03_CUSTOMER-JOURNEY/CustomerJourneyMap-rv edited.pdf" class="nav-link pdf-link">📊 Customer Journey Map PDF</a>
+            <nav>
+                <a href="/">Zurück zur Übersicht</a>
+                <a href="src/03_CUSTOMER-JOURNEY/M-1012P - Tagged.pdf">PDF Version</a>
+                <a href="src/03_CUSTOMER-JOURNEY/CustomerJourneyMap-rv edited.pdf">Customer Journey Map PDF</a>
             </nav>
         </header>
 
-        <main class="case-study-content">
+        <main>
             <section class="content-section financial-overview">
                 <h2 class="section-title">Finanzielle Übersicht & KPIs</h2>
                 <div class="section-content">
@@ -335,26 +334,16 @@
             </section>
         </main>
 
-        <script>
-            mermaid.initialize({
-                startOnLoad: true,
-                theme: 'neutral',
-                journey: {
-                    contentHeight: 100,
-                    width: 1200,
-                    diagramMarginX: 50,
-                    diagramMarginY: 10,
-                    boxTextMargin: 5,
-                    boxMargin: 10,
-                    boxWidth: 150,
-                    boxHeight: 36
-                }
-            });
-        </script>
-
-        <footer class="case-footer">
+        <footer>
             <p>© 2024 HWZ Case Studies. Alle Rechte vorbehalten.</p>
         </footer>
     </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral'
+        });
+    </script>
 </body>
 </html> 
