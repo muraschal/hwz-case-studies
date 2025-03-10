@@ -196,6 +196,49 @@
                 </div>
             </section>
 
+            <section class="content-section">
+                <h2 class="section-title">5. Aktuelle Finanzdaten</h2>
+                <div class="section-content">
+                    <div class="stock-widget">
+                        <div class="stock-header">
+                            <h3>Ford Motor Company (F:NYSE)</h3>
+                            <div class="stock-price-container">
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                                    {
+                                        "symbol": "NYSE:F",
+                                        "width": "350",
+                                        "colorTheme": "light",
+                                        "isTransparent": true,
+                                        "locale": "de_DE"
+                                    }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stock-chart">
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                                {
+                                    "symbol": "NYSE:F",
+                                    "width": "100%",
+                                    "height": 220,
+                                    "locale": "de_DE",
+                                    "dateRange": "12M",
+                                    "colorTheme": "light",
+                                    "isTransparent": true,
+                                    "autosize": true,
+                                    "largeChartUrl": ""
+                                }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="content-section conclusion">
                 <h2 class="section-title">Fazit</h2>
                 <div class="section-content">
@@ -209,81 +252,66 @@
             <h2 class="section-title">Herausforderungen der F150 Transformation</h2>
             <div class="mermaid">
                 graph LR
-                    F150[F150 Autonomie-Dilemma]
+                    F150[F150 Autonomie]
                     
                     %% Markenidentität
-                    M[Markenidentität]
-                    M1[Built Ford Tough]
-                    M2[Emotionale Bindung]
-                    M3[Amerikanische Werte]
-                    M1a[Robustheit]
-                    M1b[Zuverlässigkeit]
-                    M2a[Persönliche Kontrolle]
-                    M2b[Fahrerlebnis]
-                    M3a[Freiheit]
-                    M3b[Unabhängigkeit]
+                    M[Marke]
+                    M1[Built Tough]
+                    M2[Emotion]
+                    M3[Werte]
+                    M1a[Robust]
+                    M1b[Zuverlässig]
+                    M2a[Kontrolle]
+                    M2b[Erlebnis]
                     
                     %% Technologie
-                    T[Technologie]
-                    T1[Autonomie-Level]
+                    T[Technik]
+                    T1[Autonomie]
                     T2[Sicherheit]
-                    T3[Integration]
-                    T1a[Level 2-3 vs. 4-5]
-                    T1b[Assistenzsysteme]
+                    T3[System]
+                    T1a[Level 2-3]
+                    T1b[Level 4-5]
                     T2a[Haftung]
-                    T2b[Zuverlässigkeit]
-                    T3a[Legacy-Systeme]
-                    T3b[Neue Plattformen]
+                    T2b[Standards]
                     
                     %% Markt
-                    K[Kundenakzeptanz]
+                    K[Kunden]
                     K1[Zielgruppen]
-                    K2[Preisgestaltung]
-                    K3[Nutzungsszenarien]
-                    K1a[Traditionelle Kunden]
-                    K1b[Neue Segmente]
-                    K2a[Entwicklungskosten]
-                    K2b[Marktpreise]
-                    K3a[Privat]
-                    K3b[Kommerziell]
+                    K2[Preis]
+                    K3[Nutzung]
+                    K1a[Traditionell]
+                    K1b[Neu]
+                    K2a[Kosten]
+                    K2b[Märkte]
                     
                     %% Wettbewerb
                     W[Wettbewerb]
-                    W1[Tesla/Rivian]
-                    W2[GM/RAM]
-                    W3[Marktposition]
-                    W1a[Tech-Innovation]
-                    W1b[Neue Player]
-                    W2a[Traditionelle OEMs]
-                    W2b[Strategien]
-                    W3a[Marktführerschaft]
-                    W3b[Differenzierung]
+                    W1[Neue Player]
+                    W2[OEMs]
+                    W3[Position]
+                    W1a[Tesla]
+                    W1b[Rivian]
+                    W2a[GM]
+                    W2b[RAM]
 
                     %% Verbindungen
-                    F150 --> M
-                    F150 --> T
-                    F150 --> K
-                    F150 --> W
+                    F150 --> M & T & K & W
                     
                     M --> M1 & M2 & M3
                     M1 --> M1a & M1b
                     M2 --> M2a & M2b
-                    M3 --> M3a & M3b
                     
                     T --> T1 & T2 & T3
                     T1 --> T1a & T1b
                     T2 --> T2a & T2b
-                    T3 --> T3a & T3b
                     
                     K --> K1 & K2 & K3
                     K1 --> K1a & K1b
                     K2 --> K2a & K2b
-                    K3 --> K3a & K3b
                     
                     W --> W1 & W2 & W3
                     W1 --> W1a & W1b
                     W2 --> W2a & W2b
-                    W3 --> W3a & W3b
 
                     %% Styling
                     classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
@@ -300,10 +328,12 @@
                 theme: 'neutral',
                 flowchart: {
                     curve: 'basis',
-                    padding: 20,
-                    nodeSpacing: 50,
-                    rankSpacing: 50,
-                    useMaxWidth: false
+                    padding: 15,
+                    nodeSpacing: 30,
+                    rankSpacing: 30,
+                    useMaxWidth: true,
+                    htmlLabels: true,
+                    fontSize: 12
                 }
             });
         </script>

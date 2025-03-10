@@ -641,4 +641,42 @@ footer {
         font-size: 12px;
         min-width: 600px; /* Minimale Breite für Lesbarkeit */
     }
+}
+
+/* Aktienkurs Widget Styles */
+.stock-widget {
+    background: var(--glass-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--glass-shadow);
+}
+
+.stock-header {
+    margin-bottom: 1.5rem;
+}
+
+.stock-header h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.stock-price-container {
+    margin-bottom: 1.5rem;
+}
+
+.stock-chart {
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .stock-widget {
+        padding: 1rem;
+    }
+    
+    .stock-header h3 {
+        font-size: 1.1rem;
+    }
 } 
