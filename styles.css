@@ -618,4 +618,27 @@ footer {
 
 .next-steps strong {
     color: #495057;
+}
+
+/* Video Section Styles */
+.video-section {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--glass-shadow);
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
 } 
