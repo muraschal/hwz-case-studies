@@ -6,6 +6,7 @@
     <title>Piaggio Case Study - Details</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body class="case-study">
     <div class="container">
@@ -119,5 +120,59 @@
             <p>© 2024 HWZ Case Studies. Alle Rechte vorbehalten.</p>
         </footer>
     </div>
+
+    <div class="fishbone-container">
+        <div class="mermaid">
+            graph LR
+                Piaggio[Digitale Transformation Piaggio]
+                
+                T1[Tradition]
+                T2[Heritage]
+                T3[Markenidentität]
+                
+                I1[Neue Technologien]
+                I2[Digitale Plattformen]
+                I3[IoT Integration]
+                
+                M1[Marktwandel]
+                M2[Neue Zielgruppen]
+                M3[Globalisierung]
+                
+                R1[Regulierungen]
+                R2[Umweltauflagen]
+                R3[Sicherheitsstandards]
+                
+                Piaggio --> T1
+                Piaggio --> T2
+                Piaggio --> T3
+                
+                Piaggio --> I1
+                Piaggio --> I2
+                Piaggio --> I3
+                
+                Piaggio --> M1
+                Piaggio --> M2
+                Piaggio --> M3
+                
+                Piaggio --> R1
+                Piaggio --> R2
+                Piaggio --> R3
+
+                classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
+                classDef main fill:#e3f2fd,stroke:#1976d2,stroke-width:2px;
+                class Piaggio main;
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            flowchart: {
+                curve: 'basis',
+                padding: 20
+            }
+        });
+    </script>
 </body>
 </html> 

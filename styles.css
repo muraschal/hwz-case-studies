@@ -353,11 +353,11 @@ footer {
 
 .fishbone-container {
     margin: 2rem 0;
-    text-align: center;
-    background: var(--background-color);
     padding: 2rem;
+    background: var(--light-color);
     border-radius: 4px;
     border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
 }
 
 .fishbone-image {
@@ -600,4 +600,45 @@ footer {
     color: var(--secondary-color);
     margin-bottom: 1rem;
     font-size: 1.1rem;
+}
+
+.mermaid {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+/* Mermaid-spezifische Anpassungen */
+.mermaid .node rect {
+    fill: var(--light-color);
+    stroke: var(--glass-border);
+    rx: 4px;
+    ry: 4px;
+}
+
+.mermaid .node text {
+    fill: var(--text-color);
+}
+
+.mermaid .edgePath .path {
+    stroke: var(--glass-border);
+    stroke-width: 1.5px;
+}
+
+.mermaid .arrowheadPath {
+    fill: var(--glass-border);
+    stroke: none;
+}
+
+/* Responsive Anpassungen für das Diagramm */
+@media (max-width: 768px) {
+    .fishbone-container {
+        padding: 1rem;
+        margin: 1rem 0;
+        overflow-x: auto;
+    }
+    
+    .mermaid {
+        font-size: 12px;
+        min-width: 600px; /* Minimale Breite für Lesbarkeit */
+    }
 } 
