@@ -1,31 +1,49 @@
 // Warten, bis das DOM vollständig geladen ist
 document.addEventListener('DOMContentLoaded', function() {
-    // Elemente auswählen
+    // Search functionality
     const searchInput = document.getElementById('searchInput');
-    const caseStudyCards = document.querySelectorAll('.case-study-card');
-    
-    // Suchfunktion
-    searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        
-        // Durch alle Case Study Karten iterieren
-        caseStudyCards.forEach(card => {
-            // Text aus der Karte extrahieren
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            const description = card.querySelector('.card-body p').textContent.toLowerCase();
-            const caseNumber = card.querySelector('.case-number').textContent.toLowerCase();
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const caseStudyCards = document.querySelectorAll('.case-study-card');
             
-            // Prüfen, ob der Suchbegriff im Titel, in der Beschreibung oder in der Fallnummer vorkommt
-            const isMatch = title.includes(searchTerm) || 
-                           description.includes(searchTerm) || 
-                           caseNumber.includes(searchTerm);
-            
-            // Karte anzeigen oder ausblenden
-            card.style.display = isMatch ? 'flex' : 'none';
+            caseStudyCards.forEach(card => {
+                const title = card.querySelector('.card-header h3').textContent.toLowerCase();
+                const description = card.querySelector('.case-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
-    });
-    
+    }
+
+    // Initialize Mermaid diagrams if present
+    if (typeof mermaid !== 'undefined') {
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            flowchart: {
+                curve: 'basis',
+                padding: 20
+            },
+            journey: {
+                contentHeight: 100,
+                width: 1200,
+                diagramMarginX: 50,
+                diagramMarginY: 10,
+                boxTextMargin: 5,
+                boxMargin: 10,
+                boxWidth: 150,
+                boxHeight: 36
+            }
+        });
+    }
+
     // Animation für Karten beim Laden der Seite
+    const caseStudyCards = document.querySelectorAll('.case-study-card');
     caseStudyCards.forEach((card, index) => {
         setTimeout(() => {
             card.style.opacity = '1';
