@@ -309,4 +309,132 @@ footer {
     .card-header, .card-body, .card-footer {
         padding: 1rem;
     }
+}
+
+/* Case Study Details Page */
+.case-study {
+    background-color: #f8f9fa;
+}
+
+.case-header {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.case-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.case-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.section-title {
+    padding: 1.5rem;
+    margin: 0;
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
+    padding: 1.5rem;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.split-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .split-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.subsection-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.challenge-list, .opportunity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.challenge-list li, .opportunity-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.challenge-list li:before {
+    content: "⚠️";
+    position: absolute;
+    left: 0;
+}
+
+.opportunity-list li:before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+}
+
+.conclusion {
+    background-color: var(--light-color);
+}
+
+.conclusion .section-content {
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.case-footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
 } 
