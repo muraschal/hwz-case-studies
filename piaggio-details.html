@@ -3,136 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piaggio Case Study - HWZ Case Studies</title>
+    <title>Piaggio Case Study - Details</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Zusätzliche Stile für die Detailseite */
-        .case-detail-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
-        
-        .case-detail-content {
-            background-color: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-        }
-        
-        .section {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-        }
-        
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .highlight {
-            background-color: rgba(231, 76, 60, 0.1);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 500;
-        }
-        
-        .opinion {
-            font-style: italic;
-            color: #555;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .back-button {
-            margin-bottom: 2rem;
-        }
-    </style>
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <header class="case-detail-header">
-        <div class="container">
-            <h1>Piaggio Case Study</h1>
-            <p>Vom Kultobjekt zur digitalen Mobilitätsplattform</p>
+<body class="case-study">
+    <div class="container">
+        <header class="case-header">
+            <h1 class="case-title">Piaggio Case Study</h1>
+            <h2 class="case-subtitle">Vom Kultobjekt zur digitalen Mobilitätsplattform</h2>
+            
             <nav class="navigation">
                 <a href="/" class="nav-link">🏠 Zurück zur Übersicht</a>
-                <a href="/src/01_PIAGGIO/01_PIAGGIO.pdf" class="nav-link pdf-link">📝 PDF Version</a>
+                <a href="src/01_PIAGGIO/01_PIAGGIO.pdf" class="nav-link pdf-link">📝 PDF Version</a>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main class="container">
-        <a href="index.html" class="btn back-button">
-            <i class="fas fa-arrow-left"></i> Zurück zur Übersicht
-        </a>
-        
-        <div class="case-detail-content">
-            <div class="section">
+        <main class="case-study-content">
+            <section class="content-section video-section">
                 <h2 class="section-title">Video Präsentation</h2>
-                <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1064357810?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="01_PIAGGIO"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">1. Kontextanalyse: Zwischen Kultobjekt und Komplexitätsfalle</h2>
-                <p>Piaggio hat mit der Vespa nicht einfach nur einen Scooter geschaffen – sondern eine kulturelle Ikone. Doch während der "Dolce Vita"-Mythos weiterlebt, steht Piaggio vor einer gnadenlosen Wahrheit des modernen Marktes: Der schnelle Takt von Innovation und steigende regulatorische Anforderungen werden zum zynischen Realitätscheck. Das einstige Erfolgsrezept – wenige, sorgfältig designte Modelle mit langer Laufzeit – droht im digitalisierten Zeitalter zum Wettbewerbsnachteil zu werden.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">2. Marktdynamik und Digitalisierung: Vom Oldtimer zum digitalen Ökosystem</h2>
-                <p>Piaggio kämpft im Kontext zunehmender Regulierungen (Stichwort "Green Engine") gegen Wettbewerber, die Digitalisierung und modulare Geschäftsmodelle konsequenter umsetzen. Während Aprilia durch Co-Engineering, Outsourcing und agile Produktionsprozesse rasch auf Marktveränderungen reagiert, steckt Piaggio noch in den tradierten Fertigungsmethoden fest.</p>
-                <p class="opinion">#meinung typisch europäisch: hochqualitativ, aber träge.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">3. IT-Infrastruktur und Prozessdigitalisierung</h2>
-                <p>Ein kritischer Punkt ist Piaggios vertikal integrierte Produktionsstruktur. Während Konkurrenten wie Aprilia mittels starker Prozessdigitalisierung, agilen Entwicklungsprozessen und ausgefeilter Lieferantenintegration Flexibilität und Geschwindigkeit maximieren, hält Piaggio an einer internen Motorenproduktion fest. Dies steigert zwar die Qualitätssicherung, hemmt jedoch die Fähigkeit, schnell auf Markttrends zu reagieren.</p>
-                <p class="opinion">#meinung Um langfristig überlebensfähig zu bleiben, sollte Piaggio über modulare Produktionssysteme und ein digitalisiertes Zuliefer-Ökosystem nachdenken.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">4. Wirtschaftlichkeit digitaler Investitionen (ROI-Analyse)</h2>
-                <p>Die geplante Investition in das neue Motorenwerk („Green Engine") zeigt einen klassischen Konflikt: Innovationszwang versus Kostendruck. Die digitale Prozesssteuerung eines hoch automatisierten Werks (Stichwort Industrie 4.0) könnte die Produktionskosten langfristig senken. Allerdings zeigt die Wirtschaftlichkeitsanalyse klar: Ohne Skaleneffekte droht Piaggio, aufgrund zu niedriger Stückzahlen, in die Verlustzone zu rutschen. Der notwendige ROI könnte nur durch Skalierung, Kooperationen und digitale Vernetzung gesichert werden.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">5. Wettbewerbsanalyse mit einem IT-Blickwinkel</h2>
-                <p>Die japanische Konkurrenz ist eine Blaupause für datengetriebene Fertigung und globale Standardisierung. Ihre Strategie basiert auf digitalen Plattformen zur Standardisierung und Massenproduktion, während Aprilia durch agiles, datenbasiertes Management von Zulieferern und Entwicklungszyklen punkten kann. Piaggio hingegen muss dringend klären, wie digitale Systeme (z.B. digitale Zwillinge oder IoT-Lösungen) ihre Produktlebenszyklen beschleunigen könnten.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">6. Digitale Geschäftsmodelle: Vom Fahrzeughersteller zur Mobility-as-a-Service-Plattform?</h2>
-                <p>Die Herausforderungen rund um Verkehrsdichte und Emissionsvorschriften bieten Piaggio die Chance, mit digitalen Mobilitätsservices neue Märkte zu erschliessen. Statt ausschliesslich physische Produkte zu vermarkten, könnte Piaggio in vernetzte Scooter-Flotten und Softwarelösungen investieren – eine Chance, die der Vespa-Kult als Hebel zur Digitalisierung optimal nutzen könnte.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">7. Fazit & Handlungsempfehlung: "Kill your darlings" ⚡</h2>
-                <p>Piaggio steht an einer kritischen Weggabelung: Innovation erzwingen oder alte Pfade polieren? Um langfristig erfolgreich zu sein, sollte Piaggio schleunigst auf eine modulare, agile und digital vernetzte Produktionsstrategie setzen. Die entscheidende Frage ist nicht nur, ob ein neues Motorenwerk profitabel ist, sondern ob Piaggio bereit ist, sich von seinen "Darlings" zu lösen und mit digitalen Hebeln aus einer Kultmarke ein modernes Mobilitätsunternehmen zu formen.</p>
-                <p class="highlight">Sei schön schnell und schlau – oder werde langsam und irrelevant. 🚀⚡</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">Fishbone-Diagramm</h2>
-                <p>Das folgende Fishbone-Diagramm zeigt die Hauptursachen für Piaggios aktuelle Herausforderungen:</p>
-                <div class="fishbone-container">
-                    <img src="images/piaggio-fishbone.png" alt="Fishbone-Diagramm zu Piaggios Herausforderungen" class="fishbone-image">
+                <div class="section-content">
+                    <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1064357810?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="01_PIAGGIO"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
-            </div>
+            </section>
 
             <section class="content-section">
-                <h2 class="section-title">Markenvergleich: Piaggio, Aprilia und Honda</h2>
+                <h2 class="section-title">1. Kontextanalyse: Zwischen Kultobjekt und Komplexitätsfalle</h2>
                 <div class="section-content">
-                    <div class="table-responsive">
-                        <table class="comparison-table">
+                    <p>Piaggio hat mit der Vespa nicht einfach nur einen Scooter geschaffen – sondern eine kulturelle Ikone. Doch während der "Dolce Vita"-Mythos weiterlebt, steht Piaggio vor einer gnadenlosen Wahrheit des modernen Marktes: Der schnelle Takt von Innovation und steigende regulatorische Anforderungen werden zum zynischen Realitätscheck. Das einstige Erfolgsrezept – wenige, sorgfältig designte Modelle mit langer Laufzeit – droht im digitalisierten Zeitalter zum Wettbewerbsnachteil zu werden.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2 class="section-title">2. Marktdynamik und Digitalisierung</h2>
+                <div class="section-content">
+                    <p>Piaggio kämpft im Kontext zunehmender Regulierungen (Stichwort "Green Engine") gegen Wettbewerber, die Digitalisierung und modulare Geschäftsmodelle konsequenter umsetzen. Während Aprilia durch Co-Engineering, Outsourcing und agile Produktionsprozesse rasch auf Marktveränderungen reagiert, steckt Piaggio noch in den tradierten Fertigungsmethoden fest.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2 class="section-title">3. IT-Infrastruktur und Prozessdigitalisierung</h2>
+                <div class="section-content">
+                    <p>Ein kritischer Punkt ist Piaggios vertikal integrierte Produktionsstruktur. Während Konkurrenten wie Aprilia mittels starker Prozessdigitalisierung, agilen Entwicklungsprozessen und ausgefeilter Lieferantenintegration Flexibilität und Geschwindigkeit maximieren, hält Piaggio an einer internen Motorenproduktion fest. Dies steigert zwar die Qualitätssicherung, hemmt jedoch die Fähigkeit, schnell auf Markttrends zu reagieren.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2 class="section-title">4. Wirtschaftlichkeit digitaler Investitionen (ROI-Analyse)</h2>
+                <div class="section-content">
+                    <p>Die geplante Investition in das neue Motorenwerk („Green Engine") zeigt einen klassischen Konflikt: Innovationszwang versus Kostendruck. Die digitale Prozesssteuerung eines hoch automatisierten Werks (Stichwort Industrie 4.0) könnte die Produktionskosten langfristig senken. Allerdings zeigt die Wirtschaftlichkeitsanalyse klar: Ohne Skaleneffekte droht Piaggio, aufgrund zu niedriger Stückzahlen, in die Verlustzone zu rutschen. Der notwendige ROI könnte nur durch Skalierung, Kooperationen und digitale Vernetzung gesichert werden.</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2 class="section-title">5. Wettbewerbsanalyse mit einem IT-Blickwinkel</h2>
+                <div class="section-content">
+                    <div class="table-container">
+                        <p class="table-caption">Markenvergleich:</p>
+                        <table class="analysis-table">
                             <thead>
                                 <tr>
                                     <th>Dimensionen</th>
@@ -155,70 +83,41 @@
                                     <td>Qualität, Zuverlässigkeit, globale Standards</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Kundensegment</strong></td>
-                                    <td>Urbane Pendler, Lifestyle-orientierte Stadtbewohner</td>
-                                    <td>Junge, trendbewusste Zielgruppen, Sportbegeisterte</td>
-                                    <td>Breite Zielgruppe, technisch orientierte Kunden</td>
-                                </tr>
-                                <tr>
                                     <td><strong>Produktion</strong></td>
-                                    <td>Vertikal integriert, interne Produktion von Motoren und Schlüsselkomponenten</td>
-                                    <td>Outsourcing, Kooperationsnetzwerk, Lean Manufacturing</td>
+                                    <td>Vertikal integriert, interne Produktion</td>
+                                    <td>Outsourcing, Kooperationsnetzwerk</td>
                                     <td>Globale Produktion, Economies of Scale</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Differenzierung</strong></td>
-                                    <td>Kultmarke mit starker Geschichte und starkem emotionalen Branding</td>
-                                    <td>Schnelligkeit bei Produktinnovationen, Designorientierung, erfolgreiche Nischenstrategie</td>
-                                    <td>Technologische Innovation, zuverlässige Qualität, globale Präsenz</td>
-                                </tr>
-                                <tr>
                                     <td><strong>Innovationsfokus</strong></td>
-                                    <td>"Grüne" Motoren, umweltfreundliche Technologie, Einhaltung neuer Emissionsstandards</td>
-                                    <td>Schnelle Markteinführung neuer Designs, kontinuierliche Modellinnovation</td>
-                                    <td>Technologische Exzellenz, praktische Innovationen wie Wetterschutz</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Produktstrategie</strong></td>
-                                    <td>Wenige, sorgfältig entwickelte Modelle mit langer Lebensdauer</td>
-                                    <td>Breite Modellpalette, schnelle Reaktion auf Modetrends</td>
-                                    <td>Breite Palette global relevanter Produkte, lange Produktlebenszyklen</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Aktuelle Trends</strong></td>
-                                    <td>Nachhaltigkeit, urbane Mobilität, umweltfreundliche Technologien</td>
-                                    <td>Modeorientierte, schnelle Produktzyklen, flexible Fertigung</td>
-                                    <td>Globalisierung der Produktion, technologische Lösungen für Alltag und Komfort</td>
+                                    <td>"Grüne" Motoren, Umwelttechnologie</td>
+                                    <td>Schnelle Markteinführung, Design</td>
+                                    <td>Technologische Exzellenz</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
-                    <h3 class="subsection-title">Trends im Markt insgesamt:</h3>
-                    <ul class="trend-list">
-                        <li><strong>Nachhaltigkeit:</strong> Steigende regulatorische Anforderungen und Umweltbewusstsein führen zur Entwicklung und Einführung von umweltfreundlicheren Motoren (direkte Einspritzung, emissionsarme Technologien).</li>
-                        <li><strong>Urbanisierung & Verkehrsdichte:</strong> Steigende Nachfrage nach effizienten, wendigen und kompakten Fahrzeugen in dicht besiedelten urbanen Gebieten.</li>
-                        <li><strong>Lifestyle & Mode:</strong> Roller und Motorräder werden zunehmend als Mode- und Lifestyle-Produkte betrachtet, besonders in urbanen Zentren Europas.</li>
-                        <li><strong>Flexible Fertigung & Outsourcing:</strong> Starke Nachfrage nach schneller Innovation und Modediversität fördert schlanke Produktion und Netzwerkmodell (wie bei Aprilia).</li>
-                        <li><strong>Globale Standards & Economy of Scale:</strong> Die Fähigkeit, globale Produkte zu entwickeln, die große Absatzmengen erreichen und Kostenvorteile bieten (Honda).</li>
-                    </ul>
-
-                    <div class="sources">
-                        <p><strong>Quellen:</strong></p>
-                        <ul>
-                            <li>Piaggio und Aprilia Case Studie</li>
-                            <li>Purpose-Driven Unternehmen und Markenstrategie</li>
-                        </ul>
-                    </div>
                 </div>
             </section>
-        </div>
-    </main>
+            
+            <section class="content-section">
+                <h2 class="section-title">6. Digitale Geschäftsmodelle</h2>
+                <div class="section-content">
+                    <p>Die Herausforderungen rund um Verkehrsdichte und Emissionsvorschriften bieten Piaggio die Chance, mit digitalen Mobilitätsservices neue Märkte zu erschliessen. Statt ausschliesslich physische Produkte zu vermarkten, könnte Piaggio in vernetzte Scooter-Flotten und Softwarelösungen investieren – eine Chance, die der Vespa-Kult als Hebel zur Digitalisierung optimal nutzen könnte.</p>
+                </div>
+            </section>
+            
+            <section class="content-section conclusion">
+                <h2 class="section-title">Fazit</h2>
+                <div class="section-content">
+                    <p>Piaggio steht an einer kritischen Weggabelung: Innovation erzwingen oder alte Pfade polieren? Um langfristig erfolgreich zu sein, sollte Piaggio schleunigst auf eine modulare, agile und digital vernetzte Produktionsstrategie setzen. Die entscheidende Frage ist nicht nur, ob ein neues Motorenwerk profitabel ist, sondern ob Piaggio bereit ist, sich von seinen "Darlings" zu lösen und mit digitalen Hebeln aus einer Kultmarke ein modernes Mobilitätsunternehmen zu formen.</p>
+                </div>
+            </section>
+        </main>
 
-    <footer class="case-footer">
-        <div class="container">
-            <p>&copy; 2023 HWZ Case Studies. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
+        <footer class="case-footer">
+            <p>© 2024 HWZ Case Studies. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
 </body>
 </html> 
