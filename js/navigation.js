@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownToggles = document.querySelectorAll('.nav-link.dropdown-toggle');
 
     // Toggle mobile menu
-    mobileMenuToggle?.addEventListener('click', () => {
+    mobileMenuToggle?.addEventListener('click', (e) => {
+        e.stopPropagation(); // Verhindere Bubble-up
+        mobileMenuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
-        
-        // Animate hamburger button
-        const spans = mobileMenuToggle.querySelectorAll('span');
-        spans.forEach(span => span.classList.toggle('active'));
     });
 
     // Handle dropdown toggles
@@ -17,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
+                e.stopPropagation(); // Verhindere Bubble-up
                 const navItem = toggle.closest('.nav-item');
                 
                 // Close other dropdowns
@@ -38,13 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (!isClickInside && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
                 document.querySelectorAll('.nav-item.active').forEach(item => {
                     item.classList.remove('active');
                 });
-                
-                // Reset hamburger button
-                const spans = mobileMenuToggle.querySelectorAll('span');
-                spans.forEach(span => span.classList.remove('active'));
             }
         }
     });
@@ -53,13 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             navLinks.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
             document.querySelectorAll('.nav-item.active').forEach(item => {
                 item.classList.remove('active');
             });
-            
-            // Reset hamburger button
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            spans.forEach(span => span.classList.remove('active'));
         }
     });
 }); 
