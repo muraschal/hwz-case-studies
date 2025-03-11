@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Banana Republic Case Study - Customer Journey Map: Von Retail zu Digital Experience">
+    
+    <title>Banana Republic Case Study | HWZ</title>
+    <link rel="stylesheet" href="../../styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tauchen Sie ein in die detaillierte Customer Journey Map von Banana Republic: Von der traditionellen Retail-Marke zur digitalen Fashion-Experience. Analysieren Sie die Touchpoints und Kundenerlebnisse im Omnichannel-Kontext.">
+    <meta name="keywords" content="Banana Republic, Customer Journey Map, Retail, Fashion, Digital Transformation, Omnichannel, Kundenerlebnis, Mode">
+    <meta name="author" content="HWZ Case Studies">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Banana Republic - Die digitale Transformation einer Retail-Ikone">
+    <meta property="og:description" content="Erleben Sie die Customer Journey von Banana Republic: Wie die Modemarke traditionelles Retail-Shopping mit digitaler Innovation verbindet.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://hwz-case-studies.rapold.io/images/banana-republic-og.jpg">
+    <meta property="og:url" content="https://hwz-case-studies.rapold.io/banana-republic-details.html">
+    <meta property="og:site_name" content="HWZ Case Studies">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Banana Republic: Vom Store zur digitalen Fashion-Experience">
+    <meta name="twitter:description" content="Analyse der Customer Journey bei Banana Republic: Wie die Marke Online und Offline zu einem nahtlosen Erlebnis verschmilzt.">
+    <meta name="twitter:image" content="https://hwz-case-studies.rapold.io/images/banana-republic-og.jpg">
+    
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="session-banner">
+            <span class="session-tag">Session 4</span>
+            <span class="session-date">10. März 2024</span>
+        </div>
+        <header class="site-header">
+            <div class="video-background">
+                <iframe src="https://player.vimeo.com/video/1064445611?autoplay=1&loop=1&background=1&muted=1" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen="true">
+                </iframe>
+            </div>
+            <div class="header-content">
+                <h1>Banana Republic Case Study</h1>
+                <p class="header-description">
+                    Customer Journey Map: Von Retail zu Digital Experience
+                </p>
+            </div>
+        </header>
+
+        <main class="case-study-content">
+            <section class="content-section financial-overview">
+                <h2 class="section-title">Finanzielle Übersicht & KPIs</h2>
+                <div class="section-content">
+                    <div class="kpi-grid">
+                        <div class="stock-info">
+                            <h3>Gap Inc. (GPS:NYSE)</h3>
+                            <div class="stock-chart">
+                                <div class="tradingview-widget-container">
+                                    <div id="tradingview_gap"></div>
+                                    <script type="text/javascript">
+                                    new TradingView.MediumWidget({
+                                        "symbols": [
+                                            ["Gap Inc.", "GPS|1D"]
+                                        ],
+                                        "chartOnly": false,
+                                        "width": "100%",
+                                        "height": 400,
+                                        "locale": "de_DE",
+                                        "colorTheme": "light",
+                                        "autosize": true,
+                                        "showVolume": true,
+                                        "hideDateRanges": false,
+                                        "hideMarketStatus": true,
+                                        "hideSymbolLogo": false,
+                                        "scalePosition": "right",
+                                        "scaleMode": "Normal",
+                                        "fontFamily": "var(--font-sans)",
+                                        "fontSize": "12",
+                                        "noTimeScale": false,
+                                        "valuesTracking": "1",
+                                        "chartType": "line",
+                                        "backgroundColor": "rgba(255, 255, 255, 0.0)",
+                                        "container_id": "tradingview_gap"
+                                    });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <h3>Umsatz 2023</h3>
+                                <div class="metric-value">$2.1 Mrd.</div>
+                                <div class="metric-change positive">+5.8% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Online-Anteil</h3>
+                                <div class="metric-value">38%</div>
+                                <div class="metric-change positive">+12% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Store Traffic</h3>
+                                <div class="metric-value">15.2M</div>
+                                <div class="metric-change negative">-2.3% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Customer LTV</h3>
+                                <div class="metric-value">$850</div>
+                                <div class="metric-change positive">+7.2% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Conversion Rate</h3>
+                                <div class="metric-value">3.8%</div>
+                                <div class="metric-change positive">+0.5% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>NPS Score</h3>
+                                <div class="metric-value">62</div>
+                                <div class="metric-change positive">+8 Points</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">1. Awareness Phase</h2>
+                <div class="section-content">
+                    <p>Die erste Berührung mit Banana Republic erfolgt oft über digitale Kanäle. Die Marke nutzt gezielt Social Media und Influencer Marketing, um ihre Zielgruppe anzusprechen. Dabei wird besonders Wert auf hochwertige Bildsprache und authentische Markenbotschaften gelegt.</p>
+                    
+                    <div class="table-container">
+                        <p class="table-caption">Touchpoints in der Awareness-Phase:</p>
+                        <table class="analysis-table">
+                            <thead>
+                                <tr>
+                                    <th>Touchpoint</th>
+                                    <th>Ziel</th>
+                                    <th>Emotionale Reaktion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Touchpoint">Social Media Ads</td>
+                                    <td data-label="Ziel">Markenbekanntheit steigern</td>
+                                    <td data-label="Emotionale Reaktion">Neugier, Inspiration</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Touchpoint">Influencer Content</td>
+                                    <td data-label="Ziel">Authentizität vermitteln</td>
+                                    <td data-label="Emotionale Reaktion">Vertrauen, Identifikation</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Touchpoint">Newsletter</td>
+                                    <td data-label="Ziel">Regelmässiger Kontakt</td>
+                                    <td data-label="Emotionale Reaktion">Information, Zugehörigkeit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">2. Consideration Phase</h2>
+                <div class="section-content">
+                    <p>In der Consideration-Phase suchen Kunden aktiv nach Informationen und Inspiration. Banana Republic bietet hier eine Vielzahl von digitalen Touchpoints, die den Entscheidungsprozess unterstützen.</p>
+                    
+                    <div class="split-content">
+                        <div class="digital-touchpoints">
+                            <h3 class="subsection-title">Digitale Touchpoints:</h3>
+                            <ul>
+                                <li><strong>Website:</strong> Responsive Design, intuitive Navigation</li>
+                                <li><strong>Style Guides:</strong> Saisonale Looks, Kombinationsmöglichkeiten</li>
+                                <li><strong>Produktvergleiche:</strong> Detaillierte Informationen, Größenberatung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">3. Store Experience</h2>
+                <div class="section-content">
+                    <p>Der physische Store bleibt ein zentraler Touchpoint in der Customer Journey. Banana Republic legt besonderen Wert auf eine hochwertige Laden-Atmosphäre und exzellenten Service.</p>
+                    
+                    <div class="table-container">
+                        <p class="table-caption">Store Experience Analyse:</p>
+                        <table class="analysis-table">
+                            <thead>
+                                <tr>
+                                    <th>Aspekt</th>
+                                    <th>Umsetzung</th>
+                                    <th>Kundennutzen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Aspekt">Store Design</td>
+                                    <td data-label="Umsetzung">Premium Ambiente, klare Strukturierung</td>
+                                    <td data-label="Kundennutzen">Orientierung, Wohlfühlatmosphäre</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Aspekt">Personalisierte Beratung</td>
+                                    <td data-label="Umsetzung">Geschultes Personal, Styling-Expertise</td>
+                                    <td data-label="Kundennutzen">Kompetente Unterstützung</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Aspekt">Digital Integration</td>
+                                    <td data-label="Umsetzung">Tablets für Produktinfo, Click & Collect</td>
+                                    <td data-label="Kundennutzen">Nahtloses Omnichannel-Erlebnis</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">4. Purchase Phase</h2>
+                <div class="section-content">
+                    <p>Die Kaufphase ist bei Banana Republic durch eine Omnichannel-Strategie geprägt. Kunden können flexibel zwischen verschiedenen Kaufoptionen wählen und erhalten dabei ein nahtloses Einkaufserlebnis über alle Kanäle hinweg.</p>
+                    
+                    <div class="split-content">
+                        <div class="purchase-options">
+                            <h3 class="subsection-title">Kaufoptionen & Conversion-Optimierung:</h3>
+                            <ul>
+                                <li><strong>Store Kauf:</strong> 
+                                    <ul>
+                                        <li>Persönliche Beratung durch geschultes Personal</li>
+                                        <li>Mobile Point-of-Sale Systeme für flexible Kaufabwicklung</li>
+                                        <li>Digitale Größenberatung via Smart Mirror</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Online Shop:</strong>
+                                    <ul>
+                                        <li>24/7 Shopping mit KI-gestützter Produktempfehlung</li>
+                                        <li>Virtual Try-On für ausgewählte Produkte</li>
+                                        <li>Live Chat Support</li>
+                                        <li>Express Checkout mit gespeicherten Präferenzen</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Click & Collect:</strong>
+                                    <ul>
+                                        <li>Same-Day Pickup in ausgewählten Stores</li>
+                                        <li>Echtzeit-Bestandsanzeige</li>
+                                        <li>Reservierung zur Anprobe</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <h3>Mobile Conversion</h3>
+                                <div class="metric-value">4.2%</div>
+                                <div class="metric-change positive">+0.8% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Click & Collect</h3>
+                                <div class="metric-value">22%</div>
+                                <div class="metric-change positive">+5% YoY</div>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Warenkorbwert</h3>
+                                <div class="metric-value">$125</div>
+                                <div class="metric-change positive">+12% YoY</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">5. After-Sale & Loyalty</h2>
+                <div class="section-content">
+                    <p>Nach dem Kauf fokussiert sich Banana Republic auf den Aufbau langfristiger Kundenbeziehungen durch personalisierte Kommunikation, proaktiven Service und ein datengetriebenes Loyalty-Programm.</p>
+                    
+                    <div class="table-container">
+                        <p class="table-caption">After-Sale Excellence:</p>
+                        <table class="analysis-table">
+                            <thead>
+                                <tr>
+                                    <th>Bereich</th>
+                                    <th>Maßnahmen</th>
+                                    <th>Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Bereich">Personalisierung</td>
+                                    <td data-label="Maßnahmen">
+                                        <ul>
+                                            <li>KI-basierte Style-Empfehlungen</li>
+                                            <li>Personalisierte Email-Kampagnen</li>
+                                            <li>Individuelle Geburtstagsaktionen</li>
+                                        </ul>
+                                    </td>
+                                    <td data-label="Impact">+24% Repeat Purchase Rate</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Bereich">Service Excellence</td>
+                                    <td data-label="Maßnahmen">
+                                        <ul>
+                                            <li>24/7 Chat Support</li>
+                                            <li>Video-Styling Sessions</li>
+                                            <li>Proaktive Versandbenachrichtigungen</li>
+                                        </ul>
+                                    </td>
+                                    <td data-label="Impact">92% Servicezufriedenheit</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Bereich">Loyalty Programm</td>
+                                    <td data-label="Maßnahmen">
+                                        <ul>
+                                            <li>Mehrstufiges Rewards-System</li>
+                                            <li>Exklusive Preview-Events</li>
+                                            <li>Personalisierte Bonus-Aktionen</li>
+                                        </ul>
+                                    </td>
+                                    <td data-label="Impact">+18% Member Revenue YoY</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h3>Loyalty Penetration</h3>
+                            <div class="metric-value">68%</div>
+                            <div class="metric-change positive">+15% YoY</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Customer Lifetime</h3>
+                            <div class="metric-value">4.2 Jahre</div>
+                            <div class="metric-change positive">+0.8 Jahre YoY</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Return Rate</h3>
+                            <div class="metric-value">12%</div>
+                            <div class="metric-change negative">+2% YoY</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Review Score</h3>
+                            <div class="metric-value">4.6/5</div>
+                            <div class="metric-change positive">+0.3 YoY</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section conclusion">
+                <h2 class="section-title">Fazit</h2>
+                <div class="section-content">
+                    <p>Die Customer Journey bei Banana Republic zeigt eine gelungene Integration von digitalem und physischem Shopping-Erlebnis. Die Marke schafft es, traditionelle Retail-Stärken wie persönliche Beratung und hochwertige Store-Atmosphäre mit digitalen Innovationen zu verbinden.</p>
+                    <p>Besonders erfolgreich sind die nahtlosen Übergänge zwischen den verschiedenen Kanälen und die konsequente Ausrichtung auf ein premium Markenerlebnis. Die Herausforderung wird sein, diese hohe Qualität der Customer Experience auch in Zukunft über alle Touchpoints hinweg konsistent zu halten.</p>
+                </div>
+            </section>
+
+            <section class="customer-journey-analysis">
+                <h2>Customer Journey Analyse</h2>
+                <p>Die folgende Analyse basiert auf den Frameworks ZMOT (Zero Moment of Truth), FMOT (First Moment of Truth) und SMOT (Second Moment of Truth), um die Customer Journey bei Banana Republic detailliert zu untersuchen.</p>
+
+                <section class="zmot-section">
+                    <h3>Zero Moment of Truth (ZMOT)</h3>
+                    <p class="framework-description">ZMOT beschreibt den Moment, in dem Kunden online nach einem Produkt recherchieren und erste Berührungspunkte entstehen.</p>
+
+                    <h4>Fokusfragen für Banana Republic:</h4>
+                    <ul>
+                        <li>Sind bezahlte Suchanzeigen auf Google sichtbar, wenn man nach Banana Republic oder ihren Produkten sucht?</li>
+                        <li>Welche Präsenz hat Banana Republic auf YouTube? Gibt es vom Unternehmen erstellte und/oder von Nutzern generierte Inhalte?</li>
+                        <li>Wie tritt Banana Republic auf sozialen Medien (Instagram, Facebook, Pinterest etc.) auf?
+                            <ul>
+                                <li>Gibt es regelmäßige Beiträge vom Unternehmen?</li>
+                                <li>Teilen Nutzer ihre Erfahrungen aktiv auf diesen Plattformen?</li>
+                            </ul>
+                        </li>
+                        <li>Finden sich Nutzerinhalte, die auf anderen sozialen Medien oder YouTube geteilt werden?</li>
+                    </ul>
+                </section>
+
+                <section class="fmot-section">
+                    <h3>First Moment of Truth (FMOT)</h3>
+                    <p class="framework-description">FMOT beschreibt die erste direkte Interaktion des Kunden mit dem Produkt oder der Website des Unternehmens.</p>
+
+                    <h4>Website-Performance und Nutzererlebnis:</h4>
+                    <ul>
+                        <li>Wie schnell lädt die Webseite von Banana Republic?</li>
+                        <li>Entspricht die Ästhetik der Webseite dem Markenimage von Banana Republic?</li>
+                        <li>Wie ist das Sucherlebnis auf der Webseite gestaltet?</li>
+                        <li>Gibt es häufig Promotionen oder spezielle Angebote?</li>
+                    </ul>
+
+                    <h4>Online-Offline Integration:</h4>
+                    <ul>
+                        <li>Bietet Banana Republic eine Option, online zu bestellen und im Laden abzuholen?</li>
+                        <li>Ist dieser Prozess benutzerfreundlich gestaltet?</li>
+                        <li>Wie schnell sind Produkte nach der Bestellung abholbereit?</li>
+                        <li>Werden Produkte, die im Laden abgeholt werden, zusätzlich nach Hause geliefert, falls gewünscht?</li>
+                    </ul>
+
+                    <h4>Zahlungssysteme:</h4>
+                    <ul>
+                        <li>Sind verschiedene Zahlungsmethoden (z.B. Google Pay, Apple Pay) integriert?</li>
+                        <li>Gibt es eine "One-click" Bestellmöglichkeit?</li>
+                    </ul>
+
+                    <h4>Cross-Plattform-Kompatibilität:</h4>
+                    <ul>
+                        <li>Gibt es eine Mobile-App und ist sie gut auf der Webseite integriert?</li>
+                        <li>Unterstützt die App die Koordination von Online-Bestellungen und Abholung im Geschäft?</li>
+                    </ul>
+
+                    <h4>Rückgabebedingungen:</h4>
+                    <ul>
+                        <li>Wie klar und transparent sind die Rückgaberichtlinien dargestellt?</li>
+                    </ul>
+                </section>
+
+                <section class="smot-section">
+                    <h3>Second Moment of Truth (SMOT)</h3>
+                    <p class="framework-description">SMOT beschreibt die Erfahrung nach dem Kauf, einschließlich Kundenservice, Nutzerbewertungen und Mund-zu-Mund-Propaganda.</p>
+
+                    <h4>Fokusfragen für Banana Republic:</h4>
+                    <ul>
+                        <li>Unterstützt Banana Republic aktiv nutzergenerierte Inhalte (z.B. Bewertungen, Fotos, Videos)? Wie stark engagieren sich Kunden hierbei?</li>
+                        <li>Sind die Produktbewertungen auf der Webseite hilfreich und authentisch?</li>
+                        <li>Gibt es ein Treueprogramm, das Wiederkäufe fördert und Mund-zu-Mund-Empfehlungen unterstützt?</li>
+                        <li>Existieren hilfreiche "How-to"-Videos oder FAQs? Sind diese primär vom Unternehmen oder von Kunden erstellt?</li>
+                    </ul>
+                </section>
+
+                <section class="next-steps">
+                    <h3>Mögliche nächste Schritte für die Analyse:</h3>
+                    <ol>
+                        <li><strong>Kundenerlebnis selbst testen:</strong> Gehe auf die Webseite, durchlaufe den Kaufprozess und analysiere die einzelnen Schritte hinsichtlich Nutzerfreundlichkeit und Markenimage.</li>
+                        <li><strong>Social Listening:</strong> Überprüfe, wie häufig und wie positiv Banana Republic auf sozialen Netzwerken erwähnt wird.</li>
+                        <li><strong>Wettbewerbsanalyse:</strong> Vergleiche das Erlebnis mit Hauptkonkurrenten (z.B. Zara, Gap, Uniqlo).</li>
+                    </ol>
+                </section>
+            </section>
+        </main>
+
+        <!-- Footer wird durch components.js eingefügt -->
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral'
+        });
+    </script>
+
+    <script src="../../js/components.js"></script>
+</body>
+</html> 

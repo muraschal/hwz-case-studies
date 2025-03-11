@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HWZ Case Studies - Digitale Transformation in der Praxis">
     
-    <title>HWZ Case Studies | Digital Business Management</title>
+    <title>HWZ Case Studies</title>
     <link rel="stylesheet" href="styles.css">
     
     <!-- Favicon -->
@@ -14,26 +14,17 @@
     <link rel="manifest" href="/images/favicon/site.webmanifest">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="images/HWZ-Logo.png" alt="HWZ Logo" />
-                <span>HWZ Case Studies</span>
-            </a>
-            <div class="nav-links">
-                <a href="/" class="nav-link active">Übersicht</a>
-                <a href="piaggio-details.html" class="nav-link">Piaggio</a>
-                <a href="ford-details.html" class="nav-link">Ford</a>
-                <a href="banana-republic-details.html" class="nav-link">Banana Republic</a>
-            </div>
-        </div>
-    </nav>
-
     <div class="container">
         <header class="site-header">
+            <div class="video-background">
+                <iframe src="https://player.vimeo.com/video/1064617300?autoplay=1&loop=1&background=1&muted=1" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
             <div class="header-content">
                 <h1>HWZ Case Studies</h1>
-                <p class="subtitle">Digital Business Management</p>
                 <p class="header-description">
                     Praxisnahe Analysen digitaler Transformationsprojekte aus verschiedenen Branchen
                 </p>
@@ -43,50 +34,43 @@
         <main>
             <section class="featured-cases">
                 <div class="case-studies-grid">
-                    <article class="case-study-card">
-                        <div class="card-content">
-                            <h2>Piaggio</h2>
-                            <p class="case-description">Analyse der digitalen Transformation bei Piaggio und deren Auswirkungen auf das Geschäftsmodell.</p>
-                            <div class="tags">
-                                <span class="tag">Mobilität</span>
-                                <span class="tag">Innovation</span>
-                            </div>
-                            <a href="piaggio-details.html" class="case-study-link">Zur Case Study</a>
-                        </div>
-                    </article>
-
-                    <article class="case-study-card">
-                        <div class="card-content">
-                            <h2>Ford</h2>
-                            <p class="case-description">Untersuchung der digitalen Transformation bei Ford und die strategische Neuausrichtung des Unternehmens.</p>
-                            <div class="tags">
-                                <span class="tag">Automotive</span>
-                                <span class="tag">Strategie</span>
-                            </div>
-                            <a href="ford-details.html" class="case-study-link">Zur Case Study</a>
-                        </div>
-                    </article>
-
-                    <article class="case-study-card">
-                        <div class="card-content">
-                            <h2>Banana Republic</h2>
-                            <p class="case-description">Analyse der digitalen Transformation im Einzelhandel am Beispiel von Banana Republic.</p>
-                            <div class="tags">
-                                <span class="tag">Retail</span>
-                                <span class="tag">E-Commerce</span>
-                            </div>
-                            <a href="banana-republic-details.html" class="case-study-link">Zur Case Study</a>
-                        </div>
-                    </article>
+                    <!-- Tag 1 -->
+                    <a href="src/Session_01_CaseMethod-UVA/case-method.html" class="case-study-card">
+                        <div class="session-tag">Session 1</div>
+                        <h3>Case Method UVA</h3>
+                        <p>Einführung in die Case Study Methodik der University of Virginia</p>
+                    </a>
+                    <a href="src/Session_02_Piaggio/piaggio.html" class="case-study-card">
+                        <div class="session-tag">Session 2</div>
+                        <h3>Piaggio</h3>
+                        <p>Transformation eines traditionellen Fahrzeugherstellers in das digitale Zeitalter</p>
+                    </a>
+                    <a href="src/Session_03_Ford/ford.html" class="case-study-card">
+                        <div class="session-tag">Session 3</div>
+                        <h3>Ford</h3>
+                        <p>Entwicklung des F-150 Lightning: Elektrifizierung einer Ikone</p>
+                    </a>
+                    <a href="src/Session_04-Journey-Mapping/banana-republic.html" class="case-study-card">
+                        <div class="session-tag">Session 4</div>
+                        <h3>Banana Republic</h3>
+                        <p>Customer Journey Map: Von Retail zu Digital Experience</p>
+                    </a>
+                    <!-- Tag 2 -->
+                    <a href="src/Session_05_GEN-AI_Logo/gen-ai-image-creation.html" class="case-study-card">
+                        <div class="session-tag">Session 5</div>
+                        <h3>Gen AI Image Creation</h3>
+                        <p>KI-gestützte Bilderstellung mit Google Gemini für Vibe Kayaks</p>
+                    </a>
+                    <a href="src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" class="case-study-card">
+                        <div class="session-tag">Session 6</div>
+                        <h3>AI for Personal Growth</h3>
+                        <p>KI als Katalysator für persönliche und berufliche Entwicklung</p>
+                    </a>
                 </div>
             </section>
         </main>
-
-        <footer class="site-footer">
-            <div class="footer-content">
-                <p>Marcel Rapold | HWZ EMBA | Version: 1912384</p>
-            </div>
-        </footer>
     </div>
+
+    <script src="js/components.js"></script>
 </body>
 </html> 
