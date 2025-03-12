@@ -6,15 +6,29 @@
     <meta name="description" content="HWZ Case Studies - Digitale Transformation in der Praxis">
     
     <title>HWZ Case Studies</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    
+    <script src="/assets/js/navigation.js" defer></script>
 </head>
 <body>
     <div class="container">
+        <nav class="nav-menu">
+            <div class="nav-container">
+                <a href="/" class="nav-brand">
+                    <img src="/assets/images/HWZ-Logo.png" alt="HWZ Logo">
+                    Case Studies
+                </a>
+                <ul class="nav-list">
+                    <!-- Navigation wird durch navigation.js geladen -->
+                </ul>
+            </div>
+        </nav>
+
         <header class="site-header">
             <div class="video-background">
                 <iframe src="https://player.vimeo.com/video/1064617300?autoplay=1&loop=1&background=1&muted=1" 
@@ -32,45 +46,147 @@
         </header>
 
         <main>
-            <section class="featured-cases">
-                <div class="case-studies-grid">
-                    <!-- Tag 1 -->
-                    <a href="src/Session_01_CaseMethod-UVA/case-method.html" class="case-study-card">
-                        <div class="session-tag">Session 1</div>
+            <section class="grid">
+                <!-- Tag 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 1</span>
+                        <span class="date">10. März 2024</span>
+                    </div>
+                    <div class="card-content">
                         <h3>Case Method UVA</h3>
                         <p>Einführung in die Case Study Methodik der University of Virginia</p>
-                    </a>
-                    <a href="src/Session_02_Piaggio/piaggio.html" class="case-study-card">
-                        <div class="session-tag">Session 2</div>
-                        <h3>Piaggio</h3>
-                        <p>Transformation eines traditionellen Fahrzeugherstellers in das digitale Zeitalter</p>
-                    </a>
-                    <a href="src/Session_03_Ford/ford.html" class="case-study-card">
-                        <div class="session-tag">Session 3</div>
-                        <h3>Ford</h3>
-                        <p>Entwicklung des F-150 Lightning: Elektrifizierung einer Ikone</p>
-                    </a>
-                    <a href="src/Session_04-Journey-Mapping/banana-republic.html" class="case-study-card">
-                        <div class="session-tag">Session 4</div>
+                        <a href="/src/Session_01_CaseMethod-UVA/case-method.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 1</span>
+                        <span class="date">10. März 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Piaggio Case Study</h3>
+                        <p>Digitale Transformation eines traditionellen Fahrzeugherstellers</p>
+                        <a href="/src/Session_02_Piaggio/piaggio.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 1</span>
+                        <span class="date">10. März 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ford F-150 Lightning</h3>
+                        <p>Elektrifizierung einer amerikanischen Ikone</p>
+                        <a href="/src/Session_03_Ford/ford.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 1</span>
+                        <span class="date">10. März 2024</span>
+                    </div>
+                    <div class="card-content">
                         <h3>Banana Republic</h3>
-                        <p>Customer Journey Map: Von Retail zu Digital Experience</p>
-                    </a>
-                    <!-- Tag 2 -->
-                    <a href="src/Session_05_GEN-AI_Logo/gen-ai-image-creation.html" class="case-study-card">
-                        <div class="session-tag">Session 5</div>
-                        <h3>Gen AI Image Creation</h3>
-                        <p>KI-gestützte Bilderstellung mit Google Gemini für Vibe Kayaks</p>
-                    </a>
-                    <a href="src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" class="case-study-card">
-                        <div class="session-tag">Session 6</div>
+                        <p>Customer Journey Mapping in der Modebranche</p>
+                        <a href="/src/Session_04-Journey-Mapping/journey-mapping.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tag 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 2</span>
+                        <span class="date">11. März 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Gen AI Logo Creation</h3>
+                        <p>KI-gestützte Bildgenerierung und Markenentwicklung</p>
+                        <a href="/src/Session_05_GEN-AI_Logo/gen-ai-logo.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 2</span>
+                        <span class="date">11. März 2024</span>
+                    </div>
+                    <div class="card-content">
                         <h3>AI for Personal Growth</h3>
-                        <p>KI als Katalysator für persönliche und berufliche Entwicklung</p>
-                    </a>
+                        <p>KI als Katalysator für persönliche Entwicklung</p>
+                        <a href="/src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tag 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 3</span>
+                        <span class="date">12. März 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>AI Leadership</h3>
+                        <p>Wie KI uns zu besseren Führungskräften macht</p>
+                        <a href="/src/Session_07_HowAICanMakeUsBetterLeaders/ai-leadership.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="tag">Tag 3</span>
+                        <span class="date">12. März 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pet World</h3>
+                        <p>Digitale Transformation im Heimtiermarkt</p>
+                        <a href="/src/Session_08_PetWorld/pet-world.html" class="card-link">
+                            <span>Mehr erfahren</span>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
-
-    <script src="js/components.js"></script>
 </body>
 </html> 

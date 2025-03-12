@@ -1,58 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdownToggles = document.querySelectorAll('.nav-link.dropdown-toggle');
+// Navigation data
+const navigationData = [
+    {
+        title: "Tag 1",
+        links: [
+            { title: "Einführung", url: "/src/Session_01_Introduction/introduction.html" },
+            { title: "Digitale Transformation", url: "/src/Session_02_Digital-Transformation/digital-transformation.html" }
+        ]
+    },
+    {
+        title: "Tag 2",
+        links: [
+            { title: "Digitale Geschäftsmodelle", url: "/src/Session_03_Digital-Business-Models/digital-business-models.html" },
+            { title: "Digitale Innovation", url: "/src/Session_04_Digital-Innovation/digital-innovation.html" }
+        ]
+    },
+    {
+        title: "Tag 3",
+        links: [
+            { title: "GEN AI Logo Creation", url: "/src/Session_05_GEN-AI_Logo/gen-ai-image-creation.html" },
+            { title: "AI for Personal Growth", url: "/src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" },
+            { title: "AI Leadership", url: "/src/Session_07_HowAICanMakeUsBetterLeaders/how-ai-leaders.html" },
+            { title: "PetWorld", url: "/src/Session_08_PetWorld/pet-world.html" }
+        ]
+    }
+];
 
-    // Toggle mobile menu
-    mobileMenuToggle?.addEventListener('click', (e) => {
-        e.stopPropagation(); // Verhindere Bubble-up
-        mobileMenuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Handle dropdown toggles
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation(); // Verhindere Bubble-up
-                const navItem = toggle.closest('.nav-item');
-                
-                // Close other dropdowns
-                document.querySelectorAll('.nav-item.active').forEach(item => {
-                    if (item !== navItem) {
-                        item.classList.remove('active');
-                    }
-                });
-                
-                navItem.classList.toggle('active');
-            }
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-            const isClickInside = navLinks.contains(e.target) || mobileMenuToggle.contains(e.target);
-            
-            if (!isClickInside && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                document.querySelectorAll('.nav-item.active').forEach(item => {
-                    item.classList.remove('active');
-                });
-            }
-        }
-    });
-
-    // Handle window resize
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            navLinks.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-            document.querySelectorAll('.nav-item.active').forEach(item => {
-                item.classList.remove('active');
-            });
-        }
-    });
-}); 
+// Build navigation HTML
+const navList = document.querySelector('.nav-list');
+if (navList) {
+    const navHtml = navigationData.map(day => `
+        <li class="nav-item">
+            <div class="nav-day-title">${day.title}</div>
+            <ul class="nav-links">
+                ${day.links.map(link => `
+                    <li><a href="${link.url}">${link.title}</a></li>
+                `).join('')}
+            </ul>
+        </li>
+    `).join('');
+    
+    navList.innerHTML = navHtml;
+} 

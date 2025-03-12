@@ -6,9 +6,9 @@
     <title>Gen AI Image Creation - Google Gemini | HWZ Cases</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="../../images/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/assets/images/favicon/site.webmanifest">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Erfahren Sie mehr über die Möglichkeiten der KI-gestützten Bilderstellung mit Google Gemini: Ein praktischer Anwendungsfall für Vibe Kayaks.">
@@ -19,17 +19,78 @@
     <meta property="og:title" content="Gen AI Image Creation mit Google Gemini">
     <meta property="og:description" content="Entdecken Sie die Möglichkeiten der KI-gestützten Bilderstellung für Marketing und Produktpräsentation.">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="../../images/cases/gen-ai-og.jpg">
+    <meta property="og:image" content="/assets/images/cases/gen-ai-og.jpg">
     <meta property="og:url" content="https://hwz-case-studies.rapold.io/src/Session_05_GEN-AI_Logo/gen-ai-image-creation.html">
     <meta property="og:site_name" content="HWZ Case Studies">
     
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="https://player.vimeo.com/api/player.js"></script>
-    <script src="/js/vimeo-player.js"></script>
+    <script src="../../assets/js/vimeo-player.js"></script>
+    <script src="/assets/js/navigation.js" defer></script>
 </head>
 <body>
     <div class="container">
+        <nav class="nav-menu">
+            <div class="nav-container">
+                <a href="/" class="nav-brand">
+                    <img src="/assets/images/HWZ-Logo.png" alt="HWZ Logo">
+                    Case Studies
+                </a>
+                <ul class="nav-list" data-state="closed">
+                    <li>
+                        <button class="nav-trigger" data-state="closed">Tag 1</button>
+                        <div class="nav-content" data-state="closed">
+                            <a href="/src/Session_01_CaseMethod-UVA/case-method.html" class="nav-link">
+                                <div class="nav-link-content">
+                                    <span class="nav-link-title">Case Method UVA</span>
+                                    <span class="nav-link-description">Einführung in die Case Study Methodik</span>
+                                </div>
+                            </a>
+                            <a href="/src/Session_02_Piaggio/piaggio.html" class="nav-link">
+                                <div class="nav-link-content">
+                                    <span class="nav-link-title">Piaggio Case Study</span>
+                                    <span class="nav-link-description">Digitale Transformation im Fahrzeugbau</span>
+                                </div>
+                            </a>
+                            <a href="/src/Session_03_Ford/ford.html" class="nav-link">
+                                <div class="nav-link-content">
+                                    <span class="nav-link-title">Ford F-150 Lightning</span>
+                                    <span class="nav-link-description">Elektrifizierung einer Ikone</span>
+                                </div>
+                            </a>
+                            <a href="/src/Session_04-Journey-Mapping/banana-republic.html" class="nav-link">
+                                <div class="nav-link-content">
+                                    <span class="nav-link-title">Banana Republic</span>
+                                    <span class="nav-link-description">Customer Journey Mapping</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="nav-trigger" data-state="closed">Tag 2</button>
+                        <div class="nav-content" data-state="closed">
+                            <a href="/src/Session_05_GEN-AI_Logo/gen-ai-image-creation.html" class="nav-link">
+                                <div class="nav-link-content">
+                                    <span class="nav-link-title">Gen AI Image Creation</span>
+                                    <span class="nav-link-description">KI-gestützte Bildgenerierung</span>
+                                </div>
+                            </a>
+                            <a href="/src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" class="nav-link">
+                                <div class="nav-link-content">
+                                    <span class="nav-link-title">AI for Personal Growth</span>
+                                    <span class="nav-link-description">KI als Entwicklungskatalysator</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="nav-mobile-trigger" aria-label="Menü">
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
         <!-- Session Info Banner -->
         <div class="session-banner">
             <span class="session-tag">Session 5</span>
@@ -239,7 +300,5 @@
             theme: 'neutral'
         });
     </script>
-
-    <script src="../../js/components.js"></script>
 </body>
 </html> 
