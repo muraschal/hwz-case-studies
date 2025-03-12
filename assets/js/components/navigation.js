@@ -133,38 +133,55 @@ class Navigation {
         mobileMenuButton.addEventListener('click', () => {
             const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
             mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            navigationMenu.hidden = isExpanded;
+            
+            // Toggle hidden attribute
+            if (isExpanded) {
+                navigationMenu.setAttribute('hidden', '');
+            } else {
+                navigationMenu.removeAttribute('hidden');
+            }
+            
             nav.dataset.state = isExpanded ? 'closed' : 'open';
         });
 
         // Dropdown toggles
         dropdownTriggers.forEach(trigger => {
             trigger.addEventListener('click', (e) => {
-                const dropdown = document.getElementById(trigger.getAttribute('aria-controls'));
+                const dropdown = this.container.querySelector('#' + trigger.getAttribute('aria-controls'));
                 const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
                 
                 // Close all other dropdowns
                 dropdownTriggers.forEach(otherTrigger => {
                     if (otherTrigger !== trigger) {
-                        const otherDropdown = document.getElementById(otherTrigger.getAttribute('aria-controls'));
+                        const otherDropdown = this.container.querySelector('#' + otherTrigger.getAttribute('aria-controls'));
                         otherTrigger.setAttribute('aria-expanded', 'false');
-                        otherDropdown.hidden = true;
+                        if (otherDropdown) {
+                            otherDropdown.setAttribute('hidden', '');
+                        }
                     }
                 });
 
                 // Toggle current dropdown
                 trigger.setAttribute('aria-expanded', !isExpanded);
-                dropdown.hidden = isExpanded;
+                if (dropdown) {
+                    if (isExpanded) {
+                        dropdown.setAttribute('hidden', '');
+                    } else {
+                        dropdown.removeAttribute('hidden');
+                    }
+                }
             });
         });
 
         // Close dropdowns when clicking outside
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-item')) {
+            if (!e.target.closest('.nav-item') && !e.target.closest('.nav-mobile-trigger')) {
                 dropdownTriggers.forEach(trigger => {
-                    const dropdown = document.getElementById(trigger.getAttribute('aria-controls'));
+                    const dropdown = this.container.querySelector('#' + trigger.getAttribute('aria-controls'));
                     trigger.setAttribute('aria-expanded', 'false');
-                    dropdown.hidden = true;
+                    if (dropdown) {
+                        dropdown.setAttribute('hidden', '');
+                    }
                 });
             }
         });
