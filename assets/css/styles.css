@@ -52,12 +52,14 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
 }
 
+/* Auskommentierte Fontgrößendefinitionen
 h1 { font-size: 2.25rem; }
 h2 { font-size: 1.875rem; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
 h5 { font-size: 1.125rem; }
 h6 { font-size: 1rem; }
+*/
 
 p { margin-bottom: 1rem; }
 
@@ -343,7 +345,7 @@ p { margin-bottom: 1rem; }
 }
 
 .card-content h3 {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   margin-bottom: 0.5rem;
   color: var(--color-heading);
 }
@@ -598,7 +600,7 @@ p { margin-bottom: 1rem; }
 
 .stock-info h3 {
   margin-top: 0;
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -631,12 +633,11 @@ p { margin-bottom: 1rem; }
 }
 
 .metric-card h3 {
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
   color: var(--muted-foreground);
-  text-align: center;
 }
 
 .metric-value {
@@ -1137,7 +1138,7 @@ footer {
 .customer-journey-analysis h2 {
   color: #333;
   margin-bottom: 1.5rem;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .framework-description {
@@ -1161,7 +1162,7 @@ footer {
 .customer-journey-analysis h3 {
   color: #007bff;
   margin-bottom: 1rem;
-    font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 
 .customer-journey-analysis h4 {
@@ -1402,7 +1403,7 @@ footer {
 }
 
 .fact-card h3 {
-    font-size: 0.875rem;
+    /* font-size: 0.875rem; */
     color: var(--text-color);
     opacity: 0.8;
     margin: 0 0 0.5rem 0;
@@ -1426,7 +1427,7 @@ footer {
 .section-title {
     color: var(--foreground);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     font-weight: 500;
 }
 
@@ -1553,7 +1554,7 @@ footer {
 .video-card h3 {
     padding: 1rem;
     margin: 0;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     color: var(--text-color);
     border-bottom: 1px solid var(--glass-border);
 }
