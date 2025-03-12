@@ -5,6 +5,11 @@ const navigationData = {
             title: "Tag 1",
             sessions: [
                 {
+                    label: "Session 01",
+                    title: "Case Method UVA",
+                    url: "/src/Session_01_CaseMethod-UVA/case-method.html"
+                },
+                {
                     label: "Session 02",
                     title: "Piaggio",
                     url: "/src/Session_02_Piaggio/piaggio.html"
