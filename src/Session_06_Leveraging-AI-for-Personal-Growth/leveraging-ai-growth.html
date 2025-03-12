@@ -6,16 +6,42 @@
     <meta name="description" content="AI for Personal Growth Case Study - KI als Katalysator für persönliche und berufliche Entwicklung">
     
     <title>AI for Personal Growth Case Study | HWZ</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/assets/images/favicon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/assets/images/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/assets/assets/images/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+
+    <!-- Scripts -->
+    <script type="module">
+        import Navigation from '/assets/js/components/navigation.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('navigation-container');
+            new Navigation(navContainer);
+        });
+    </script>
 </head>
 <body>
     <div class="container">
+        <!-- Session Banner -->
+        <div class="session-banner">
+            <span class="session-tag">Session 06</span>
+            <span class="session-date">12. März 2024</span>
+        </div>
+
+        <!-- Navigation Container -->
+        <div id="navigation-container"></div>
+
         <header class="site-header">
+            <div class="video-background">
+                <iframe src="https://player.vimeo.com/video/917584755?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+                    frameborder="0"
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allowfullscreen>
+                </iframe>
+            </div>
             <div class="header-content">
                 <h1>AI for Personal Growth Case Study</h1>
                 <p class="header-description">
@@ -25,19 +51,124 @@
         </header>
 
         <main class="case-study-content">
-            <nav class="main-nav">
+            <!-- Navigation -->
+            <nav class="nav-menu" data-state="closed">
                 <div class="nav-container">
-                    <a href="/" class="nav-logo">
-                        <img src="images/HWZ-Logo.png" alt="HWZ Logo" />
+                    <!-- Brand -->
+                    <a href="/" class="nav-brand">
+                        <img src="/assets/images/HWZ-Logo.png" alt="HWZ Logo">
                         <span>HWZ Case Studies</span>
                     </a>
-                    <div class="nav-links">
-                        <a href="/" class="nav-link">Übersicht</a>
-                        <a href="piaggio-details.html" class="nav-link">Piaggio</a>
-                        <a href="ford-details.html" class="nav-link">Ford</a>
-                        <a href="banana-republic-details.html" class="nav-link">Banana Republic</a>
-                        <a href="gen-ai-image-creation.html" class="nav-link">Gen AI</a>
-                        <a href="leveraging-ai-growth.html" class="nav-link active">AI Growth</a>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="nav-mobile-trigger" aria-label="Menu" aria-expanded="false" aria-controls="navigation-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+
+                    <!-- Navigation Menu -->
+                    <div class="nav-content" id="navigation-menu" hidden>
+                        <ul class="nav-list" role="menu">
+                            <!-- Tag 1 -->
+                            <li class="nav-item" role="none">
+                                <button class="nav-trigger" role="menuitem" aria-expanded="false" aria-controls="tag1-menu">
+                                    Tag 1
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="nav-dropdown" id="tag1-menu" hidden>
+                                    <div class="nav-dropdown-content">
+                                        <h3 class="nav-group-title">Tag 1 - Sessions</h3>
+                                        <ul class="nav-group-list">
+                                            <li>
+                                                <a href="/src/Session_02_Piaggio/piaggio.html" class="nav-link">
+                                                    <span class="session-label">Session 02:</span>
+                                                    Piaggio
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/src/Session_03_Ford/ford.html" class="nav-link">
+                                                    <span class="session-label">Session 03:</span>
+                                                    Ford
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/src/Session_04-Journey-Mapping/journey-mapping.html" class="nav-link">
+                                                    <span class="session-label">Session 04:</span>
+                                                    Journey Mapping
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Tag 2 -->
+                            <li class="nav-item" role="none">
+                                <button class="nav-trigger" role="menuitem" aria-expanded="false" aria-controls="tag2-menu">
+                                    Tag 2
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="nav-dropdown" id="tag2-menu" hidden>
+                                    <div class="nav-dropdown-content">
+                                        <h3 class="nav-group-title">Tag 2 - Sessions</h3>
+                                        <ul class="nav-group-list">
+                                            <li>
+                                                <a href="/src/Session_05_GEN-AI_Logo/gen-ai-logo.html" class="nav-link">
+                                                    <span class="session-label">Session 05:</span>
+                                                    Gen AI Logo
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" class="nav-link active">
+                                                    <span class="session-label">Session 06:</span>
+                                                    AI Growth
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/src/Session_07_HowAICanMakeUsBetterLeaders/ai-leadership.html" class="nav-link">
+                                                    <span class="session-label">Session 07:</span>
+                                                    AI Leadership
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Tag 3 -->
+                            <li class="nav-item" role="none">
+                                <button class="nav-trigger" role="menuitem" aria-expanded="false" aria-controls="tag3-menu">
+                                    Tag 3
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="nav-dropdown" id="tag3-menu" hidden>
+                                    <div class="nav-dropdown-content">
+                                        <h3 class="nav-group-title">Tag 3 - Sessions</h3>
+                                        <ul class="nav-group-list">
+                                            <li>
+                                                <a href="/src/Session_08_PetWorld/pet-world.html" class="nav-link">
+                                                    <span class="session-label">Session 08:</span>
+                                                    Pet World
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -204,10 +335,58 @@
         </main>
 
         <footer>
-            <p>Marcel Rapold | HWZ EMBA | Version: <a href="https://github.com/muraschal/hwz-case-studies/commit/latest" target="_blank">latest</a></p>
+            <p>Marcel Rapold | HWZ EMBA | Version: <a href="https://github.com/muraschal/hwz-case-studies" target="_blank">latest</a></p>
         </footer>
     </div>
 
-    <script src="js/components.js"></script>
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.nav-menu');
+            const mobileMenuButton = document.querySelector('.nav-mobile-trigger');
+            const navigationMenu = document.getElementById('navigation-menu');
+            const dropdownTriggers = document.querySelectorAll('.nav-trigger');
+
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                navigationMenu.hidden = isExpanded;
+                nav.dataset.state = isExpanded ? 'closed' : 'open';
+            });
+
+            // Dropdown toggles
+            dropdownTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    const dropdown = document.getElementById(trigger.getAttribute('aria-controls'));
+                    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+                    
+                    // Close all other dropdowns
+                    dropdownTriggers.forEach(otherTrigger => {
+                        if (otherTrigger !== trigger) {
+                            const otherDropdown = document.getElementById(otherTrigger.getAttribute('aria-controls'));
+                            otherTrigger.setAttribute('aria-expanded', 'false');
+                            otherDropdown.hidden = true;
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    trigger.setAttribute('aria-expanded', !isExpanded);
+                    dropdown.hidden = isExpanded;
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.nav-item')) {
+                    dropdownTriggers.forEach(trigger => {
+                        const dropdown = document.getElementById(trigger.getAttribute('aria-controls'));
+                        trigger.setAttribute('aria-expanded', 'false');
+                        dropdown.hidden = true;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

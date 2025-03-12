@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Leadership | HWZ</title>
+    <meta name="description" content="AI Leadership Case Study - KI als Werkzeug für bessere Führung">
+    
+    <title>AI Leadership Case Study | HWZ</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="/assets/js/navigation.js" defer></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+
+    <!-- Scripts -->
+    <script type="module">
+        import Navigation from '/assets/js/components/navigation.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('navigation-container');
+            new Navigation(navContainer);
+        });
+    </script>
 </head>
 <body>
-    <nav class="nav-menu">
-        <div class="nav-container">
-            <a href="../../index.html" class="nav-brand">
-                <img src="/assets/images/HWZ-Logo.png" alt="HWZ Logo">
-                Case Studies
-            </a>
-            <button class="nav-mobile-trigger" aria-label="Toggle Menu">
-                <span></span>
-            </button>
-            <ul class="nav-list" data-state="closed">
-                <!-- Navigation wird via JavaScript geladen -->
-            </ul>
-        </div>
-    </nav>
-
     <div class="container">
-        <nav class="breadcrumbs">
-            <div class="breadcrumb-item">
-                <a href="../../index.html" class="breadcrumb-link">Home</a>
-            </div>
-            <div class="breadcrumb-item">
-                <span class="breadcrumb-current">AI Leadership</span>
-            </div>
-        </nav>
+        <!-- Session Banner -->
+        <div class="session-banner">
+            <span class="session-tag">Session 07</span>
+            <span class="session-date">12. März 2024</span>
+        </div>
+
+        <!-- Navigation Container -->
+        <div id="navigation-container"></div>
 
         <header class="site-header">
             <div class="header-content">

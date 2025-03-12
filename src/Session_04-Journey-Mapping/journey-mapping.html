@@ -32,77 +32,28 @@
     <meta name="twitter:description" content="Analyse der Customer Journey bei Banana Republic: Wie die Marke Online und Offline zu einem nahtlosen Erlebnis verschmilzt.">
     <meta name="twitter:image" content="/assets/images/cases/banana-republic-og.jpg">
     
-    <script src="/assets/js/navigation.js" defer></script>
+    <script type="module">
+        import Navigation from '/assets/js/components/navigation.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('navigation-container');
+            new Navigation(navContainer);
+        });
+    </script>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body>
     <div class="container">
-        <nav class="nav-menu">
-            <div class="nav-container">
-                <a href="/" class="nav-brand">
-                    <img src="/assets/images/HWZ-Logo.png" alt="HWZ Logo">
-                    Case Studies
-                </a>
-                <ul class="nav-list" data-state="closed">
-                    <li>
-                        <button class="nav-trigger" data-state="closed">Tag 1</button>
-                        <div class="nav-content" data-state="closed">
-                            <a href="/src/Session_01_CaseMethod-UVA/case-method.html" class="nav-link">
-                                <div class="nav-link-content">
-                                    <span class="nav-link-title">Case Method UVA</span>
-                                    <span class="nav-link-description">Einführung in die Case Study Methodik</span>
-                                </div>
-                            </a>
-                            <a href="/src/Session_02_Piaggio/piaggio.html" class="nav-link">
-                                <div class="nav-link-content">
-                                    <span class="nav-link-title">Piaggio Case Study</span>
-                                    <span class="nav-link-description">Digitale Transformation im Fahrzeugbau</span>
-                                </div>
-                            </a>
-                            <a href="/src/Session_03_Ford/ford.html" class="nav-link">
-                                <div class="nav-link-content">
-                                    <span class="nav-link-title">Ford F-150 Lightning</span>
-                                    <span class="nav-link-description">Elektrifizierung einer Ikone</span>
-                                </div>
-                            </a>
-                            <a href="/src/Session_04-Journey-Mapping/banana-republic.html" class="nav-link">
-                                <div class="nav-link-content">
-                                    <span class="nav-link-title">Banana Republic</span>
-                                    <span class="nav-link-description">Customer Journey Mapping</span>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <button class="nav-trigger" data-state="closed">Tag 2</button>
-                        <div class="nav-content" data-state="closed">
-                            <a href="/src/Session_05_GEN-AI_Logo/gen-ai-image-creation.html" class="nav-link">
-                                <div class="nav-link-content">
-                                    <span class="nav-link-title">Gen AI Image Creation</span>
-                                    <span class="nav-link-description">KI-gestützte Bildgenerierung</span>
-                                </div>
-                            </a>
-                            <a href="/src/Session_06_Leveraging-AI-for-Personal-Growth/leveraging-ai-growth.html" class="nav-link">
-                                <div class="nav-link-content">
-                                    <span class="nav-link-title">AI for Personal Growth</span>
-                                    <span class="nav-link-description">KI als Entwicklungskatalysator</span>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <button class="nav-mobile-trigger" aria-label="Menü">
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-
+        <!-- Session Banner -->
         <div class="session-banner">
             <span class="session-tag">Session 4</span>
             <span class="session-date">10. März 2024</span>
         </div>
+
+        <!-- Navigation Container -->
+        <div id="navigation-container"></div>
+
         <header class="site-header">
             <div class="video-background">
                 <iframe src="https://player.vimeo.com/video/1064445611?autoplay=1&loop=1&background=1&muted=1" 

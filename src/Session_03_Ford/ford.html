@@ -27,6 +27,15 @@
     
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+    <!-- Scripts -->
+    <script type="module">
+        import Navigation from '/assets/js/components/navigation.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('navigation-container');
+            new Navigation(navContainer);
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -35,6 +44,9 @@
             <span class="session-tag">Session 3</span>
             <span class="session-date">10. März 2024</span>
         </div>
+
+        <!-- Navigation Container -->
+        <div id="navigation-container"></div>
 
         <header class="site-header">
             <div class="video-background">
@@ -53,6 +65,15 @@
         </header>
 
         <main class="case-study-content">
+            <nav class="breadcrumbs">
+                <div class="breadcrumb-item">
+                    <a href="/" class="breadcrumb-link">Übersicht</a>
+                </div>
+                <div class="breadcrumb-item">
+                    <span class="breadcrumb-current">Ford</span>
+                </div>
+            </nav>
+
             <!-- Quick Facts -->
             <section class="content-section quick-facts">
                 <h2 class="section-title">Quick Facts</h2>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PetWorld Case Study - Digitale Transformation im Heimtiermarkt">
+    <meta name="description" content="Pet World Case Study - Digitale Transformation im Heimtiermarkt">
     
-    <title>PetWorld Case Study | HWZ</title>
+    <title>Pet World Case Study | HWZ</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     
     <!-- Favicon -->
@@ -25,33 +25,24 @@
     
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script src="/assets/js/navigation.js" defer></script>
+    <script type="module">
+        import Navigation from '/assets/js/components/navigation.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const navContainer = document.getElementById('navigation-container');
+            new Navigation(navContainer);
+        });
+    </script>
 </head>
 <body>
-    <nav class="nav-menu">
-        <div class="nav-container">
-            <a href="../../index.html" class="nav-brand">
-                <img src="/assets/images/HWZ-Logo.png" alt="HWZ Logo">
-                Case Studies
-            </a>
-            <button class="nav-mobile-trigger" aria-label="Toggle Menu">
-                <span></span>
-            </button>
-            <ul class="nav-list" data-state="closed">
-                <!-- Navigation wird via JavaScript geladen -->
-            </ul>
-        </div>
-    </nav>
-
     <div class="container">
-        <nav class="breadcrumbs">
-            <div class="breadcrumb-item">
-                <a href="../../index.html" class="breadcrumb-link">Home</a>
-            </div>
-            <div class="breadcrumb-item">
-                <span class="breadcrumb-current">PetWorld</span>
-            </div>
-        </nav>
+        <!-- Session Banner -->
+        <div class="session-banner">
+            <span class="session-tag">Session 08</span>
+            <span class="session-date">12. März 2024</span>
+        </div>
+
+        <!-- Navigation Container -->
+        <div id="navigation-container"></div>
 
         <header class="site-header">
             <div class="video-background">
@@ -105,7 +96,7 @@
                                     <div id="tradingview_petworld"></div>
                                     <script type="text/javascript">
                                     new TradingView.MediumWidget({
-                                        "symbols": [["PetWorld", "NYSE:WOOF|12M"]],
+                                        "symbols": [["PetWorld", "CHWY|12M"]],
                                         "chartOnly": false,
                                         "width": "100%",
                                         "height": 400,
