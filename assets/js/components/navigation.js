@@ -66,6 +66,18 @@ const navigationData = {
                     url: "/src/Session_08_PetWorld/pet-world.html"
                 }
             ]
+        },
+        {
+            title: "Tag 4",
+            title_en: "Day 4",
+            sessions: [
+                {
+                    label: "Session 11",
+                    title: "Davis Press - Meccan Madness",
+                    title_en: "Davis Press - Meccan Madness",
+                    url: "/src/Session_11_Davis-Press-Meccan-Madness/davis-press.html"
+                }
+            ]
         }
     ]
 };
